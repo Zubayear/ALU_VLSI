@@ -1,0 +1,25 @@
+// DSCH 2.7a
+// 25-Mar-20 7:35:58 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\XNORGATE.sch
+
+module XNORGATE( B,A,Output);
+ input B,A;
+ output Output;
+ pmos #(24) pmos(w2,vdd,A); // 2.0u 0.12u
+ nmos #(24) nmos(w2,vss,A); // 1.0u 0.12u
+ nmos #(17) nmos(Output,vss,w3); // 1.0u 0.12u
+ pmos #(17) pmos(Output,vdd,w3); // 2.0u 0.12u
+ pmos #(38) pmos(w3,B,A); // 2.0u 0.12u
+ nmos #(38) nmos(w3,B,w2); // 1.0u 0.12u
+ pmos #(38) pmos(w3,A,B); // 2.0u 0.12u
+ nmos #(38) nmos(w3,w2,B); // 1.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#4000 B=~B;
+#2000 A=~A;
+
+// Simulation parameters
+// B CLK 40.000 40.000
+// A CLK 20.000 20.000

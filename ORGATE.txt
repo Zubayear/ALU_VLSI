@@ -1,0 +1,23 @@
+// DSCH 2.7a
+// 25-Mar-20 9:35:02 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\ORGATE.sch
+
+module ORGATE( B,A,out2);
+ input B,A;
+ output out2;
+ pmos #(31) pmos(w3,w1,B); // 2.0u 0.12u
+ pmos #(10) pmos(w1,vdd,A); // 2.0u 0.12u
+ nmos #(31) nmos(w3,vss,A); // 1.0u 0.12u
+ nmos #(31) nmos(w3,vss,B); // 1.0u 0.12u
+ nmos #(17) nmos(out2,vss,w3); // 1.0u 0.12u
+ pmos #(17) pmos(out2,vdd,w3); // 2.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#16000 B=~B;
+#8000 A=~A;
+
+// Simulation parameters
+// B CLK 160.000 160.000
+// A CLK 80.000 80.000

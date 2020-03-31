@@ -1,0 +1,622 @@
+// DSCH 2.7a
+// 28-Mar-20 11:16:27 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\fin.sch
+
+module fin( S0,S1,S3,S2,A0,B0,A1,B2,
+ A2,B2,A3,B3,Sign,Carry,out0,out1,
+ out2,out3);
+ input S0,S1,S3,S2,A0,B0,A1,B2;
+ input A2,B2,A3,B3;
+ output Sign,Carry,out0,out1,out2,out3;
+ wire w27,w28,w29,w30,w31,w32,w33,w34;
+ wire w35,w36,w37,w38,w39,w40,w41,w42;
+ wire w43,w44,w45,w46,w47,w48,w49,w50;
+ wire w51,w52,w53,w54,w55,w56,w57,w58;
+ wire w59,w60,w61,w62,w63,w64,w65,w66;
+ wire w67,w68,w69,w70,w71,w72,w73,w74;
+ wire w75,w76,w77,w78,w79,w80,w81,w82;
+ wire w83,w84,w85,w86,w87,w88,w89,w90;
+ wire w91,w92,w93,w94,w95,w96,w97,w98;
+ wire w99,w100,w101,w102,w103,w104,w105,w106;
+ wire w107,w108,w109,w110,w111,w112,w113,w114;
+ wire w115,w116,w117,w118,w119,w120,w121,w122;
+ wire w123,w124,w125,w126,w127,w128,w129,w130;
+ wire w131,w132,w133,w134,w135,w136,w137,w138;
+ wire w139,w140,w141,w142,w143,w144,w145,w146;
+ wire w147,w148,w149,w150,w151,w152,w153,w154;
+ wire w155,w156,w157,w158,w159,w160,w161,w162;
+ wire w163,w164,w165,w166,w167,w168,w169,w170;
+ wire w171,w172,w173,w174,w175,w176,w177,w178;
+ wire w179,w180,w181,w182,w183,w184,w185,w186;
+ wire w187,w188,w189,w190,w191,w192,w193,w194;
+ wire w195,w196,w197,w198,w199,w200,w201,w202;
+ wire w203,w204,w205,w206,w207,w208,w209,w210;
+ wire w211,w212,w213,w214,w215,w216,w217,w218;
+ wire w219,w220,w221,w222,w223,w224,w225,w226;
+ wire w227,w228,w229,w230,w231,w232,w233,w234;
+ wire w235,w236,w237,w238,w239,w240,w241,w242;
+ wire w243,w244,w245,w246,w247,w248,w249,w250;
+ wire w251,w252,w253,w254,w255,w256,w257,w258;
+ wire w259,w260,w261,w262,w263,w264,w265,w266;
+ wire w267,w268,w269,w270,w271,w272,w273,w274;
+ wire w275,w276,w277,w278,w279,w280,w281,w282;
+ wire w283,w284,w285,w286,w287,w288,w289,w290;
+ wire w291,w292,w293,w294,w295,w296,w297,w298;
+ wire w299,w300,w301,w302,w303,w304,w305,w306;
+ wire w307,w308,w309,w310,w311,w312,w313,w314;
+ wire w315,w316,w317,w318,w319,w320,w321,w322;
+ wire w323,w324,w325,w326,w327,w328,w329,w330;
+ wire w331,w332,w333,w334,w335,w336,w337,w338;
+ wire w339,w340,w341,w342,w343,w344,w345,w346;
+ wire w347,w348,w349,w350,w351,w352,w353,w354;
+ wire w355,w356,w357,w358,w359,w360,w361,w362;
+ wire w363,w364,w365,w366,w367,w368,w369,w370;
+ wire w371,w372,w373,w374,w375,w376,w377,w378;
+ wire w379,w380,w381,w382,w383,w384,w385,w386;
+ wire w387,w388,w389,w390,w391,w392,w393,w394;
+ nand #(63) nand_gc1(w27,A1,B2);
+ mux #(35) mux16_1_gc2(out1,S1,S0,w28,w29,w30,w27,w31,w32,w33,w34,w35,w36,S2,w37,w38,w39,w40,w41,w42,S3);
+ pmos #(40) pmos_XO1_FU1_gc3(w44,vdd,w43); //  
+ nmos #(40) nmos_XO2_FU2_gc4(w44,vss,w43); //  
+ pmos #(66) pmos_XO3_FU3_gc5(w45,w3,w43); //  
+ nmos #(66) nmos_XO4_FU4_gc6(w45,w3,w44); //  
+ pmos #(66) pmos_XO5_FU5_gc7(w45,w43,w3); //  
+ nmos #(66) nmos_XO6_FU6_gc8(w45,w44,w3); //  
+ pmos #(45) pmos_XO7_FU7_gc9(w28,vdd,w46); //  
+ nmos #(45) nmos_XO8_FU8_gc10(w28,vss,w46); //  
+ nmos #(40) nmos_XO9_FU9_gc11(w46,vss,w45); //  
+ pmos #(40) pmos_XO10_FU10_gc12(w46,vdd,w45); //  
+ pmos #(40) pmos_XO11_FU11_gc13(w47,vdd,A1); //  
+ nmos #(40) nmos_XO12_FU12_gc14(w47,vss,A1); //  
+ pmos #(66) pmos_XO13_FU13_gc15(w48,B2,A1); //  
+ nmos #(66) nmos_XO14_FU14_gc16(w48,B2,w47); //  
+ pmos #(66) pmos_XO15_FU15_gc17(w48,A1,B2); //  
+ nmos #(66) nmos_XO16_FU16_gc18(w48,w47,B2); //  
+ pmos #(88) pmos_XO17_FU17_gc19(w43,vdd,w49); //  
+ nmos #(88) nmos_XO18_FU18_gc20(w43,vss,w49); //  
+ nmos #(40) nmos_XO19_FU19_gc21(w49,vss,w48); //  
+ pmos #(40) pmos_XO20_FU20_gc22(w49,vdd,w48); //  
+ pmos #(53) pmos_AN21_FU21_gc23(w50,vdd,w3); //  
+ pmos #(53) pmos_AN22_FU22_gc24(w50,vdd,w43); //  
+ nmos #(53) nmos_AN23_FU23_gc25(w50,w51,w3); //  
+ nmos #(14) nmos_AN24_FU24_gc26(w51,vss,w43); //  
+ pmos #(1) pmos_AN25_FU25_gc27(w54,w52,w53); //  
+ nmos #(1) nmos_AN26_FU26_gc28(w56,w55,w53); //  
+ nmos #(39) nmos_AN27_FU27_gc29(w57,vss,w50); //  
+ pmos #(39) pmos_AN28_FU28_gc30(w57,vdd,w50); //  
+ pmos #(53) pmos_AN29_FU29_gc31(w58,vdd,A1); //  
+ pmos #(53) pmos_AN30_FU30_gc32(w58,vdd,B2); //  
+ nmos #(53) nmos_AN31_FU31_gc33(w58,w59,A1); //  
+ nmos #(14) nmos_AN32_FU32_gc34(w59,vss,B2); //  
+ pmos #(1) pmos_AN33_FU33_gc35(w62,w60,w61); //  
+ nmos #(1) nmos_AN34_FU34_gc36(w64,w63,w61); //  
+ nmos #(39) nmos_AN35_FU35_gc37(w65,vss,w58); //  
+ pmos #(39) pmos_AN36_FU36_gc38(w65,vdd,w58); //  
+ pmos #(53) pmos_OR37_FU37_gc39(w67,w66,w65); //  
+ pmos #(14) pmos_OR38_FU38_gc40(w66,vdd,w57); //  
+ nmos #(53) nmos_OR39_FU39_gc41(w67,vss,w57); //  
+ nmos #(53) nmos_OR40_FU40_gc42(w67,vss,w65); //  
+ nmos #(62) nmos_OR41_FU41_gc43(w9,vss,w67); //  
+ pmos #(62) pmos_OR42_FU42_gc44(w9,vdd,w67); //  
+ pmos #(43) pmos_NO43_gc45(w42,vdd,w68); //  
+ nmos #(43) nmos_NO44_gc46(w42,vss,w68); //  
+ pmos #(43) pmos_NO45_gc47(w38,vdd,A1); //  
+ nmos #(43) nmos_NO46_gc48(w38,vss,A1); //  
+ pmos #(62) pmos_na47_gc49(w27,vdd,A1); //  
+ pmos #(62) pmos_na48_gc50(w27,vdd,B2); //  
+ nmos #(62) nmos_na49_gc51(w27,w69,A1); //  
+ nmos #(13) nmos_na50_gc52(w69,vss,B2); //  
+ pmos #(40) pmos_XO1_FU51_gc53(w71,vdd,w70); //  
+ nmos #(40) nmos_XO2_FU52_gc54(w71,vss,w70); //  
+ pmos #(66) pmos_XO3_FU53_gc55(w72,w5,w70); //  
+ nmos #(66) nmos_XO4_FU54_gc56(w72,w5,w71); //  
+ pmos #(66) pmos_XO5_FU55_gc57(w72,w70,w5); //  
+ nmos #(66) nmos_XO6_FU56_gc58(w72,w71,w5); //  
+ pmos #(45) pmos_XO7_FU57_gc59(w41,vdd,w73); //  
+ nmos #(45) nmos_XO8_FU58_gc60(w41,vss,w73); //  
+ nmos #(40) nmos_XO9_FU59_gc61(w73,vss,w72); //  
+ pmos #(40) pmos_XO10_FU60_gc62(w73,vdd,w72); //  
+ pmos #(39) pmos_NO11_FU61_gc63(w74,vdd,A1); //  
+ nmos #(39) nmos_NO12_FU62_gc64(w74,vss,A1); //  
+ pmos #(53) pmos_OR13_FU63_gc65(w77,w75,w76); //  
+ pmos #(14) pmos_OR14_FU64_gc66(w75,vdd,w78); //  
+ nmos #(53) nmos_OR15_FU65_gc67(w77,vss,w78); //  
+ nmos #(53) nmos_OR16_FU66_gc68(w77,vss,w76); //  
+ nmos #(62) nmos_OR17_FU67_gc69(w10,vss,w77); //  
+ pmos #(62) pmos_OR18_FU68_gc70(w10,vdd,w77); //  
+ pmos #(40) pmos_XO19_FU69_gc71(w79,vdd,A1); //  
+ nmos #(40) nmos_XO20_FU70_gc72(w79,vss,A1); //  
+ pmos #(66) pmos_XO21_FU71_gc73(w80,B2,A1); //  
+ nmos #(66) nmos_XO22_FU72_gc74(w80,B2,w79); //  
+ pmos #(66) pmos_XO23_FU73_gc75(w80,A1,B2); //  
+ nmos #(66) nmos_XO24_FU74_gc76(w80,w79,B2); //  
+ pmos #(88) pmos_XO25_FU75_gc77(w70,vdd,w81); //  
+ nmos #(88) nmos_XO26_FU76_gc78(w70,vss,w81); //  
+ nmos #(40) nmos_XO27_FU77_gc79(w81,vss,w80); //  
+ pmos #(40) pmos_XO28_FU78_gc80(w81,vdd,w80); //  
+ pmos #(39) pmos_NO29_FU79_gc81(w82,vdd,w70); //  
+ nmos #(39) nmos_NO30_FU80_gc82(w82,vss,w70); //  
+ pmos #(53) pmos_AN31_FU81_gc83(w83,vdd,B2); //  
+ pmos #(53) pmos_AN32_FU82_gc84(w83,vdd,w74); //  
+ nmos #(53) nmos_AN33_FU83_gc85(w83,w84,B2); //  
+ nmos #(14) nmos_AN34_FU84_gc86(w84,vss,w74); //  
+ pmos #(1) pmos_AN35_FU85_gc87(w87,w85,w86); //  
+ nmos #(1) nmos_AN36_FU86_gc88(w89,w88,w86); //  
+ nmos #(39) nmos_AN37_FU87_gc89(w78,vss,w83); //  
+ pmos #(39) pmos_AN38_FU88_gc90(w78,vdd,w83); //  
+ pmos #(53) pmos_AN39_FU89_gc91(w90,vdd,w5); //  
+ pmos #(53) pmos_AN40_FU90_gc92(w90,vdd,w82); //  
+ nmos #(53) nmos_AN41_FU91_gc93(w90,w91,w5); //  
+ nmos #(14) nmos_AN42_FU92_gc94(w91,vss,w82); //  
+ pmos #(1) pmos_AN43_FU93_gc95(w94,w92,w93); //  
+ nmos #(1) nmos_AN44_FU94_gc96(w96,w95,w93); //  
+ nmos #(39) nmos_AN45_FU95_gc97(w76,vss,w90); //  
+ pmos #(39) pmos_AN46_FU96_gc98(w76,vdd,w90); //  
+ pmos #(38) pmos_XN97_gc99(w97,vdd,A1); //  
+ nmos #(38) nmos_XN98_gc100(w97,vss,A1); //  
+ nmos #(36) nmos_XN99_gc101(w68,vss,w98); //  
+ pmos #(36) pmos_XN100_gc102(w68,vdd,w98); //  
+ pmos #(62) pmos_XN101_gc103(w98,B2,A1); //  
+ nmos #(62) nmos_XN102_gc104(w98,B2,w97); //  
+ pmos #(62) pmos_XN103_gc105(w98,A1,B2); //  
+ nmos #(62) nmos_XN104_gc106(w98,w97,B2); //  
+ pmos #(76) pmos_NO105_gc107(w32,w99,B2); //  
+ pmos #(1) pmos_NO106_gc108(w102,w100,w101); //  
+ nmos #(1) nmos_NO107_gc109(w104,w103,w101); //  
+ pmos #(13) pmos_NO108_gc110(w99,vdd,A1); //  
+ nmos #(76) nmos_NO109_gc111(w32,vss,A1); //  
+ nmos #(76) nmos_NO110_gc112(w32,vss,B2); //  
+ mux #(37) mux4_mu111_gc113(w105,S0,S1,w27,w29,w28,w30);
+ mux #(37) mux4_mu112_gc114(w106,S0,S1,w31,w33,w34,w32);
+ mux #(37) mux4_mu113_gc115(w107,S0,S1,w35,w42,w41,w36);
+ mux #(33) mux4_mu114_gc116(out1,S2,S3,w105,w106,w108,w107);
+ mux #(37) mux4_mu115_gc117(w108,S0,S1,w37,w39,w40,w38);
+ mux #(14) mux_mu1_mu116_gc118(w109,w27,w29,S0);
+ mux #(14) mux_mu2_mu117_gc119(w110,w28,w30,S0);
+ mux #(35) mux_mu3_mu118_gc120(w105,w110,w109,S1);
+ mux #(14) mux_mu4_mu119_gc121(w111,w31,w33,S0);
+ mux #(14) mux_mu5_mu120_gc122(w112,w34,w32,S0);
+ mux #(35) mux_mu6_mu121_gc123(w106,w112,w111,S1);
+ mux #(14) mux_mu7_mu122_gc124(w113,w35,w42,S0);
+ mux #(14) mux_mu8_mu123_gc125(w114,w41,w36,S0);
+ mux #(35) mux_mu9_mu124_gc126(w107,w114,w113,S1);
+ mux #(14) mux_mu10_mu125_gc127(w115,w105,w106,S2);
+ mux #(14) mux_mu11_mu126_gc128(w116,w108,w107,S2);
+ mux #(31) mux_mu12_mu127_gc129(out1,w116,w115,S3);
+ mux #(14) mux_mu13_mu128_gc130(w117,w37,w39,S0);
+ mux #(14) mux_mu14_mu129_gc131(w118,w40,w38,S0);
+ mux #(35) mux_mu15_mu130_gc132(w108,w118,w117,S1);
+ pmos #(43) pmos_NO131_gc133(w31,vdd,w32); //  
+ nmos #(43) nmos_NO132_gc134(w31,vss,w32); //  
+ nand #(63) nand_gc135(w119,A0,B0);
+ mux #(35) mux16_1_gc136(out0,S1,S0,w120,w121,w122,w119,w123,w124,w125,w126,w127,w128,S2,w129,w130,w131,w132,w133,w134,S3);
+ pmos #(40) pmos_XO1_FU1_gc137(w136,vdd,w135); //  
+ nmos #(40) nmos_XO2_FU2_gc138(w136,vss,w135); //  
+ pmos #(66) pmos_XO3_FU3_gc139(w137,w12,w135); //  
+ nmos #(66) nmos_XO4_FU4_gc140(w137,w12,w136); //  
+ pmos #(66) pmos_XO5_FU5_gc141(w137,w135,w12); //  
+ nmos #(66) nmos_XO6_FU6_gc142(w137,w136,w12); //  
+ pmos #(45) pmos_XO7_FU7_gc143(w120,vdd,w138); //  
+ nmos #(45) nmos_XO8_FU8_gc144(w120,vss,w138); //  
+ nmos #(40) nmos_XO9_FU9_gc145(w138,vss,w137); //  
+ pmos #(40) pmos_XO10_FU10_gc146(w138,vdd,w137); //  
+ pmos #(40) pmos_XO11_FU11_gc147(w139,vdd,A0); //  
+ nmos #(40) nmos_XO12_FU12_gc148(w139,vss,A0); //  
+ pmos #(66) pmos_XO13_FU13_gc149(w140,B0,A0); //  
+ nmos #(66) nmos_XO14_FU14_gc150(w140,B0,w139); //  
+ pmos #(66) pmos_XO15_FU15_gc151(w140,A0,B0); //  
+ nmos #(66) nmos_XO16_FU16_gc152(w140,w139,B0); //  
+ pmos #(88) pmos_XO17_FU17_gc153(w135,vdd,w141); //  
+ nmos #(88) nmos_XO18_FU18_gc154(w135,vss,w141); //  
+ nmos #(40) nmos_XO19_FU19_gc155(w141,vss,w140); //  
+ pmos #(40) pmos_XO20_FU20_gc156(w141,vdd,w140); //  
+ pmos #(53) pmos_AN21_FU21_gc157(w142,vdd,w12); //  
+ pmos #(53) pmos_AN22_FU22_gc158(w142,vdd,w135); //  
+ nmos #(53) nmos_AN23_FU23_gc159(w142,w143,w12); //  
+ nmos #(14) nmos_AN24_FU24_gc160(w143,vss,w135); //  
+ pmos #(1) pmos_AN25_FU25_gc161(w146,w144,w145); //  
+ nmos #(1) nmos_AN26_FU26_gc162(w148,w147,w145); //  
+ nmos #(39) nmos_AN27_FU27_gc163(w149,vss,w142); //  
+ pmos #(39) pmos_AN28_FU28_gc164(w149,vdd,w142); //  
+ pmos #(53) pmos_AN29_FU29_gc165(w150,vdd,A0); //  
+ pmos #(53) pmos_AN30_FU30_gc166(w150,vdd,B0); //  
+ nmos #(53) nmos_AN31_FU31_gc167(w150,w151,A0); //  
+ nmos #(14) nmos_AN32_FU32_gc168(w151,vss,B0); //  
+ pmos #(1) pmos_AN33_FU33_gc169(w154,w152,w153); //  
+ nmos #(1) nmos_AN34_FU34_gc170(w156,w155,w153); //  
+ nmos #(39) nmos_AN35_FU35_gc171(w157,vss,w150); //  
+ pmos #(39) pmos_AN36_FU36_gc172(w157,vdd,w150); //  
+ pmos #(53) pmos_OR37_FU37_gc173(w159,w158,w157); //  
+ pmos #(14) pmos_OR38_FU38_gc174(w158,vdd,w149); //  
+ nmos #(53) nmos_OR39_FU39_gc175(w159,vss,w149); //  
+ nmos #(53) nmos_OR40_FU40_gc176(w159,vss,w157); //  
+ nmos #(62) nmos_OR41_FU41_gc177(w3,vss,w159); //  
+ pmos #(62) pmos_OR42_FU42_gc178(w3,vdd,w159); //  
+ pmos #(43) pmos_NO43_gc179(w134,vdd,w160); //  
+ nmos #(43) nmos_NO44_gc180(w134,vss,w160); //  
+ pmos #(43) pmos_NO45_gc181(w130,vdd,A0); //  
+ nmos #(43) nmos_NO46_gc182(w130,vss,A0); //  
+ pmos #(62) pmos_na47_gc183(w119,vdd,A0); //  
+ pmos #(62) pmos_na48_gc184(w119,vdd,B0); //  
+ nmos #(62) nmos_na49_gc185(w119,w161,A0); //  
+ nmos #(13) nmos_na50_gc186(w161,vss,B0); //  
+ pmos #(40) pmos_XO1_FU51_gc187(w163,vdd,w162); //  
+ nmos #(40) nmos_XO2_FU52_gc188(w163,vss,w162); //  
+ pmos #(66) pmos_XO3_FU53_gc189(w164,w14,w162); //  
+ nmos #(66) nmos_XO4_FU54_gc190(w164,w14,w163); //  
+ pmos #(66) pmos_XO5_FU55_gc191(w164,w162,w14); //  
+ nmos #(66) nmos_XO6_FU56_gc192(w164,w163,w14); //  
+ pmos #(45) pmos_XO7_FU57_gc193(w133,vdd,w165); //  
+ nmos #(45) nmos_XO8_FU58_gc194(w133,vss,w165); //  
+ nmos #(40) nmos_XO9_FU59_gc195(w165,vss,w164); //  
+ pmos #(40) pmos_XO10_FU60_gc196(w165,vdd,w164); //  
+ pmos #(39) pmos_NO11_FU61_gc197(w166,vdd,A0); //  
+ nmos #(39) nmos_NO12_FU62_gc198(w166,vss,A0); //  
+ pmos #(53) pmos_OR13_FU63_gc199(w169,w167,w168); //  
+ pmos #(14) pmos_OR14_FU64_gc200(w167,vdd,w170); //  
+ nmos #(53) nmos_OR15_FU65_gc201(w169,vss,w170); //  
+ nmos #(53) nmos_OR16_FU66_gc202(w169,vss,w168); //  
+ nmos #(62) nmos_OR17_FU67_gc203(w5,vss,w169); //  
+ pmos #(62) pmos_OR18_FU68_gc204(w5,vdd,w169); //  
+ pmos #(40) pmos_XO19_FU69_gc205(w171,vdd,A0); //  
+ nmos #(40) nmos_XO20_FU70_gc206(w171,vss,A0); //  
+ pmos #(66) pmos_XO21_FU71_gc207(w172,B0,A0); //  
+ nmos #(66) nmos_XO22_FU72_gc208(w172,B0,w171); //  
+ pmos #(66) pmos_XO23_FU73_gc209(w172,A0,B0); //  
+ nmos #(66) nmos_XO24_FU74_gc210(w172,w171,B0); //  
+ pmos #(88) pmos_XO25_FU75_gc211(w162,vdd,w173); //  
+ nmos #(88) nmos_XO26_FU76_gc212(w162,vss,w173); //  
+ nmos #(40) nmos_XO27_FU77_gc213(w173,vss,w172); //  
+ pmos #(40) pmos_XO28_FU78_gc214(w173,vdd,w172); //  
+ pmos #(39) pmos_NO29_FU79_gc215(w174,vdd,w162); //  
+ nmos #(39) nmos_NO30_FU80_gc216(w174,vss,w162); //  
+ pmos #(53) pmos_AN31_FU81_gc217(w175,vdd,B0); //  
+ pmos #(53) pmos_AN32_FU82_gc218(w175,vdd,w166); //  
+ nmos #(53) nmos_AN33_FU83_gc219(w175,w176,B0); //  
+ nmos #(14) nmos_AN34_FU84_gc220(w176,vss,w166); //  
+ pmos #(1) pmos_AN35_FU85_gc221(w179,w177,w178); //  
+ nmos #(1) nmos_AN36_FU86_gc222(w181,w180,w178); //  
+ nmos #(39) nmos_AN37_FU87_gc223(w170,vss,w175); //  
+ pmos #(39) pmos_AN38_FU88_gc224(w170,vdd,w175); //  
+ pmos #(53) pmos_AN39_FU89_gc225(w182,vdd,w14); //  
+ pmos #(53) pmos_AN40_FU90_gc226(w182,vdd,w174); //  
+ nmos #(53) nmos_AN41_FU91_gc227(w182,w183,w14); //  
+ nmos #(14) nmos_AN42_FU92_gc228(w183,vss,w174); //  
+ pmos #(1) pmos_AN43_FU93_gc229(w186,w184,w185); //  
+ nmos #(1) nmos_AN44_FU94_gc230(w188,w187,w185); //  
+ nmos #(39) nmos_AN45_FU95_gc231(w168,vss,w182); //  
+ pmos #(39) pmos_AN46_FU96_gc232(w168,vdd,w182); //  
+ pmos #(38) pmos_XN97_gc233(w189,vdd,A0); //  
+ nmos #(38) nmos_XN98_gc234(w189,vss,A0); //  
+ nmos #(36) nmos_XN99_gc235(w160,vss,w190); //  
+ pmos #(36) pmos_XN100_gc236(w160,vdd,w190); //  
+ pmos #(62) pmos_XN101_gc237(w190,B0,A0); //  
+ nmos #(62) nmos_XN102_gc238(w190,B0,w189); //  
+ pmos #(62) pmos_XN103_gc239(w190,A0,B0); //  
+ nmos #(62) nmos_XN104_gc240(w190,w189,B0); //  
+ pmos #(76) pmos_NO105_gc241(w124,w191,B0); //  
+ pmos #(1) pmos_NO106_gc242(w194,w192,w193); //  
+ nmos #(1) nmos_NO107_gc243(w196,w195,w193); //  
+ pmos #(13) pmos_NO108_gc244(w191,vdd,A0); //  
+ nmos #(76) nmos_NO109_gc245(w124,vss,A0); //  
+ nmos #(76) nmos_NO110_gc246(w124,vss,B0); //  
+ mux #(37) mux4_mu111_gc247(w197,S0,S1,w119,w121,w120,w122);
+ mux #(37) mux4_mu112_gc248(w198,S0,S1,w123,w125,w126,w124);
+ mux #(37) mux4_mu113_gc249(w199,S0,S1,w127,w134,w133,w128);
+ mux #(33) mux4_mu114_gc250(out0,S2,S3,w197,w198,w200,w199);
+ mux #(37) mux4_mu115_gc251(w200,S0,S1,w129,w131,w132,w130);
+ mux #(14) mux_mu1_mu116_gc252(w201,w119,w121,S0);
+ mux #(14) mux_mu2_mu117_gc253(w202,w120,w122,S0);
+ mux #(35) mux_mu3_mu118_gc254(w197,w202,w201,S1);
+ mux #(14) mux_mu4_mu119_gc255(w203,w123,w125,S0);
+ mux #(14) mux_mu5_mu120_gc256(w204,w126,w124,S0);
+ mux #(35) mux_mu6_mu121_gc257(w198,w204,w203,S1);
+ mux #(14) mux_mu7_mu122_gc258(w205,w127,w134,S0);
+ mux #(14) mux_mu8_mu123_gc259(w206,w133,w128,S0);
+ mux #(35) mux_mu9_mu124_gc260(w199,w206,w205,S1);
+ mux #(14) mux_mu10_mu125_gc261(w207,w197,w198,S2);
+ mux #(14) mux_mu11_mu126_gc262(w208,w200,w199,S2);
+ mux #(31) mux_mu12_mu127_gc263(out0,w208,w207,S3);
+ mux #(14) mux_mu13_mu128_gc264(w209,w129,w131,S0);
+ mux #(14) mux_mu14_mu129_gc265(w210,w132,w130,S0);
+ mux #(35) mux_mu15_mu130_gc266(w200,w210,w209,S1);
+ pmos #(43) pmos_NO131_gc267(w123,vdd,w124); //  
+ nmos #(43) nmos_NO132_gc268(w123,vss,w124); //  
+ nand #(63) nand_gc269(w211,A3,B3);
+ mux #(35) mux16_1_gc270(out3,S1,S0,w212,w213,w214,w211,w215,w216,w217,w218,w219,w220,S2,w221,w222,w223,w224,w225,w226,S3);
+ pmos #(40) pmos_XO1_FU1_gc271(w228,vdd,w227); //  
+ nmos #(40) nmos_XO2_FU2_gc272(w228,vss,w227); //  
+ pmos #(66) pmos_XO3_FU3_gc273(w229,w17,w227); //  
+ nmos #(66) nmos_XO4_FU4_gc274(w229,w17,w228); //  
+ pmos #(66) pmos_XO5_FU5_gc275(w229,w227,w17); //  
+ nmos #(66) nmos_XO6_FU6_gc276(w229,w228,w17); //  
+ pmos #(45) pmos_XO7_FU7_gc277(w212,vdd,w230); //  
+ nmos #(45) nmos_XO8_FU8_gc278(w212,vss,w230); //  
+ nmos #(40) nmos_XO9_FU9_gc279(w230,vss,w229); //  
+ pmos #(40) pmos_XO10_FU10_gc280(w230,vdd,w229); //  
+ pmos #(40) pmos_XO11_FU11_gc281(w231,vdd,A3); //  
+ nmos #(40) nmos_XO12_FU12_gc282(w231,vss,A3); //  
+ pmos #(66) pmos_XO13_FU13_gc283(w232,B3,A3); //  
+ nmos #(66) nmos_XO14_FU14_gc284(w232,B3,w231); //  
+ pmos #(66) pmos_XO15_FU15_gc285(w232,A3,B3); //  
+ nmos #(66) nmos_XO16_FU16_gc286(w232,w231,B3); //  
+ pmos #(88) pmos_XO17_FU17_gc287(w227,vdd,w233); //  
+ nmos #(88) nmos_XO18_FU18_gc288(w227,vss,w233); //  
+ nmos #(40) nmos_XO19_FU19_gc289(w233,vss,w232); //  
+ pmos #(40) pmos_XO20_FU20_gc290(w233,vdd,w232); //  
+ pmos #(53) pmos_AN21_FU21_gc291(w234,vdd,w17); //  
+ pmos #(53) pmos_AN22_FU22_gc292(w234,vdd,w227); //  
+ nmos #(53) nmos_AN23_FU23_gc293(w234,w235,w17); //  
+ nmos #(14) nmos_AN24_FU24_gc294(w235,vss,w227); //  
+ pmos #(1) pmos_AN25_FU25_gc295(w238,w236,w237); //  
+ nmos #(1) nmos_AN26_FU26_gc296(w240,w239,w237); //  
+ nmos #(39) nmos_AN27_FU27_gc297(w241,vss,w234); //  
+ pmos #(39) pmos_AN28_FU28_gc298(w241,vdd,w234); //  
+ pmos #(53) pmos_AN29_FU29_gc299(w242,vdd,A3); //  
+ pmos #(53) pmos_AN30_FU30_gc300(w242,vdd,B3); //  
+ nmos #(53) nmos_AN31_FU31_gc301(w242,w243,A3); //  
+ nmos #(14) nmos_AN32_FU32_gc302(w243,vss,B3); //  
+ pmos #(1) pmos_AN33_FU33_gc303(w246,w244,w245); //  
+ nmos #(1) nmos_AN34_FU34_gc304(w248,w247,w245); //  
+ nmos #(39) nmos_AN35_FU35_gc305(w249,vss,w242); //  
+ pmos #(39) pmos_AN36_FU36_gc306(w249,vdd,w242); //  
+ pmos #(53) pmos_OR37_FU37_gc307(w251,w250,w249); //  
+ pmos #(14) pmos_OR38_FU38_gc308(w250,vdd,w241); //  
+ nmos #(53) nmos_OR39_FU39_gc309(w251,vss,w241); //  
+ nmos #(53) nmos_OR40_FU40_gc310(w251,vss,w249); //  
+ nmos #(27) nmos_OR41_FU41_gc311(Carry,vss,w251); //  
+ pmos #(27) pmos_OR42_FU42_gc312(Carry,vdd,w251); //  
+ pmos #(43) pmos_NO43_gc313(w226,vdd,w252); //  
+ nmos #(43) nmos_NO44_gc314(w226,vss,w252); //  
+ pmos #(43) pmos_NO45_gc315(w222,vdd,A3); //  
+ nmos #(43) nmos_NO46_gc316(w222,vss,A3); //  
+ pmos #(62) pmos_na47_gc317(w211,vdd,A3); //  
+ pmos #(62) pmos_na48_gc318(w211,vdd,B3); //  
+ nmos #(62) nmos_na49_gc319(w211,w253,A3); //  
+ nmos #(13) nmos_na50_gc320(w253,vss,B3); //  
+ pmos #(40) pmos_XO1_FU51_gc321(w255,vdd,w254); //  
+ nmos #(40) nmos_XO2_FU52_gc322(w255,vss,w254); //  
+ pmos #(66) pmos_XO3_FU53_gc323(w256,w19,w254); //  
+ nmos #(66) nmos_XO4_FU54_gc324(w256,w19,w255); //  
+ pmos #(66) pmos_XO5_FU55_gc325(w256,w254,w19); //  
+ nmos #(66) nmos_XO6_FU56_gc326(w256,w255,w19); //  
+ pmos #(45) pmos_XO7_FU57_gc327(w225,vdd,w257); //  
+ nmos #(45) nmos_XO8_FU58_gc328(w225,vss,w257); //  
+ nmos #(40) nmos_XO9_FU59_gc329(w257,vss,w256); //  
+ pmos #(40) pmos_XO10_FU60_gc330(w257,vdd,w256); //  
+ pmos #(39) pmos_NO11_FU61_gc331(w258,vdd,A3); //  
+ nmos #(39) nmos_NO12_FU62_gc332(w258,vss,A3); //  
+ pmos #(53) pmos_OR13_FU63_gc333(w261,w259,w260); //  
+ pmos #(14) pmos_OR14_FU64_gc334(w259,vdd,w262); //  
+ nmos #(53) nmos_OR15_FU65_gc335(w261,vss,w262); //  
+ nmos #(53) nmos_OR16_FU66_gc336(w261,vss,w260); //  
+ nmos #(27) nmos_OR17_FU67_gc337(Sign,vss,w261); //  
+ pmos #(27) pmos_OR18_FU68_gc338(Sign,vdd,w261); //  
+ pmos #(40) pmos_XO19_FU69_gc339(w263,vdd,A3); //  
+ nmos #(40) nmos_XO20_FU70_gc340(w263,vss,A3); //  
+ pmos #(66) pmos_XO21_FU71_gc341(w264,B3,A3); //  
+ nmos #(66) nmos_XO22_FU72_gc342(w264,B3,w263); //  
+ pmos #(66) pmos_XO23_FU73_gc343(w264,A3,B3); //  
+ nmos #(66) nmos_XO24_FU74_gc344(w264,w263,B3); //  
+ pmos #(88) pmos_XO25_FU75_gc345(w254,vdd,w265); //  
+ nmos #(88) nmos_XO26_FU76_gc346(w254,vss,w265); //  
+ nmos #(40) nmos_XO27_FU77_gc347(w265,vss,w264); //  
+ pmos #(40) pmos_XO28_FU78_gc348(w265,vdd,w264); //  
+ pmos #(39) pmos_NO29_FU79_gc349(w266,vdd,w254); //  
+ nmos #(39) nmos_NO30_FU80_gc350(w266,vss,w254); //  
+ pmos #(53) pmos_AN31_FU81_gc351(w267,vdd,B3); //  
+ pmos #(53) pmos_AN32_FU82_gc352(w267,vdd,w258); //  
+ nmos #(53) nmos_AN33_FU83_gc353(w267,w268,B3); //  
+ nmos #(14) nmos_AN34_FU84_gc354(w268,vss,w258); //  
+ pmos #(1) pmos_AN35_FU85_gc355(w271,w269,w270); //  
+ nmos #(1) nmos_AN36_FU86_gc356(w273,w272,w270); //  
+ nmos #(39) nmos_AN37_FU87_gc357(w262,vss,w267); //  
+ pmos #(39) pmos_AN38_FU88_gc358(w262,vdd,w267); //  
+ pmos #(53) pmos_AN39_FU89_gc359(w274,vdd,w19); //  
+ pmos #(53) pmos_AN40_FU90_gc360(w274,vdd,w266); //  
+ nmos #(53) nmos_AN41_FU91_gc361(w274,w275,w19); //  
+ nmos #(14) nmos_AN42_FU92_gc362(w275,vss,w266); //  
+ pmos #(1) pmos_AN43_FU93_gc363(w278,w276,w277); //  
+ nmos #(1) nmos_AN44_FU94_gc364(w280,w279,w277); //  
+ nmos #(39) nmos_AN45_FU95_gc365(w260,vss,w274); //  
+ pmos #(39) pmos_AN46_FU96_gc366(w260,vdd,w274); //  
+ pmos #(38) pmos_XN97_gc367(w281,vdd,A3); //  
+ nmos #(38) nmos_XN98_gc368(w281,vss,A3); //  
+ nmos #(36) nmos_XN99_gc369(w252,vss,w282); //  
+ pmos #(36) pmos_XN100_gc370(w252,vdd,w282); //  
+ pmos #(62) pmos_XN101_gc371(w282,B3,A3); //  
+ nmos #(62) nmos_XN102_gc372(w282,B3,w281); //  
+ pmos #(62) pmos_XN103_gc373(w282,A3,B3); //  
+ nmos #(62) nmos_XN104_gc374(w282,w281,B3); //  
+ pmos #(76) pmos_NO105_gc375(w216,w283,B3); //  
+ pmos #(1) pmos_NO106_gc376(w286,w284,w285); //  
+ nmos #(1) nmos_NO107_gc377(w288,w287,w285); //  
+ pmos #(13) pmos_NO108_gc378(w283,vdd,A3); //  
+ nmos #(76) nmos_NO109_gc379(w216,vss,A3); //  
+ nmos #(76) nmos_NO110_gc380(w216,vss,B3); //  
+ mux #(37) mux4_mu111_gc381(w289,S0,S1,w211,w213,w212,w214);
+ mux #(37) mux4_mu112_gc382(w290,S0,S1,w215,w217,w218,w216);
+ mux #(37) mux4_mu113_gc383(w291,S0,S1,w219,w226,w225,w220);
+ mux #(33) mux4_mu114_gc384(out3,S2,S3,w289,w290,w292,w291);
+ mux #(37) mux4_mu115_gc385(w292,S0,S1,w221,w223,w224,w222);
+ mux #(14) mux_mu1_mu116_gc386(w293,w211,w213,S0);
+ mux #(14) mux_mu2_mu117_gc387(w294,w212,w214,S0);
+ mux #(35) mux_mu3_mu118_gc388(w289,w294,w293,S1);
+ mux #(14) mux_mu4_mu119_gc389(w295,w215,w217,S0);
+ mux #(14) mux_mu5_mu120_gc390(w296,w218,w216,S0);
+ mux #(35) mux_mu6_mu121_gc391(w290,w296,w295,S1);
+ mux #(14) mux_mu7_mu122_gc392(w297,w219,w226,S0);
+ mux #(14) mux_mu8_mu123_gc393(w298,w225,w220,S0);
+ mux #(35) mux_mu9_mu124_gc394(w291,w298,w297,S1);
+ mux #(14) mux_mu10_mu125_gc395(w299,w289,w290,S2);
+ mux #(14) mux_mu11_mu126_gc396(w300,w292,w291,S2);
+ mux #(31) mux_mu12_mu127_gc397(out3,w300,w299,S3);
+ mux #(14) mux_mu13_mu128_gc398(w301,w221,w223,S0);
+ mux #(14) mux_mu14_mu129_gc399(w302,w224,w222,S0);
+ mux #(35) mux_mu15_mu130_gc400(w292,w302,w301,S1);
+ pmos #(43) pmos_NO131_gc401(w215,vdd,w216); //  
+ nmos #(43) nmos_NO132_gc402(w215,vss,w216); //  
+ nand #(63) nand_gc403(w303,A2,B2);
+ mux #(35) mux16_1_gc404(out2,S1,S0,w304,w305,w306,w303,w307,w308,w309,w310,w311,w312,S2,w313,w314,w315,w316,w317,w318,S3);
+ pmos #(40) pmos_XO1_FU1_gc405(w320,vdd,w319); //  
+ nmos #(40) nmos_XO2_FU2_gc406(w320,vss,w319); //  
+ pmos #(66) pmos_XO3_FU3_gc407(w321,w9,w319); //  
+ nmos #(66) nmos_XO4_FU4_gc408(w321,w9,w320); //  
+ pmos #(66) pmos_XO5_FU5_gc409(w321,w319,w9); //  
+ nmos #(66) nmos_XO6_FU6_gc410(w321,w320,w9); //  
+ pmos #(45) pmos_XO7_FU7_gc411(w304,vdd,w322); //  
+ nmos #(45) nmos_XO8_FU8_gc412(w304,vss,w322); //  
+ nmos #(40) nmos_XO9_FU9_gc413(w322,vss,w321); //  
+ pmos #(40) pmos_XO10_FU10_gc414(w322,vdd,w321); //  
+ pmos #(40) pmos_XO11_FU11_gc415(w323,vdd,A2); //  
+ nmos #(40) nmos_XO12_FU12_gc416(w323,vss,A2); //  
+ pmos #(66) pmos_XO13_FU13_gc417(w324,B2,A2); //  
+ nmos #(66) nmos_XO14_FU14_gc418(w324,B2,w323); //  
+ pmos #(66) pmos_XO15_FU15_gc419(w324,A2,B2); //  
+ nmos #(66) nmos_XO16_FU16_gc420(w324,w323,B2); //  
+ pmos #(88) pmos_XO17_FU17_gc421(w319,vdd,w325); //  
+ nmos #(88) nmos_XO18_FU18_gc422(w319,vss,w325); //  
+ nmos #(40) nmos_XO19_FU19_gc423(w325,vss,w324); //  
+ pmos #(40) pmos_XO20_FU20_gc424(w325,vdd,w324); //  
+ pmos #(53) pmos_AN21_FU21_gc425(w326,vdd,w9); //  
+ pmos #(53) pmos_AN22_FU22_gc426(w326,vdd,w319); //  
+ nmos #(53) nmos_AN23_FU23_gc427(w326,w327,w9); //  
+ nmos #(14) nmos_AN24_FU24_gc428(w327,vss,w319); //  
+ pmos #(1) pmos_AN25_FU25_gc429(w330,w328,w329); //  
+ nmos #(1) nmos_AN26_FU26_gc430(w332,w331,w329); //  
+ nmos #(39) nmos_AN27_FU27_gc431(w333,vss,w326); //  
+ pmos #(39) pmos_AN28_FU28_gc432(w333,vdd,w326); //  
+ pmos #(53) pmos_AN29_FU29_gc433(w334,vdd,A2); //  
+ pmos #(53) pmos_AN30_FU30_gc434(w334,vdd,B2); //  
+ nmos #(53) nmos_AN31_FU31_gc435(w334,w335,A2); //  
+ nmos #(14) nmos_AN32_FU32_gc436(w335,vss,B2); //  
+ pmos #(1) pmos_AN33_FU33_gc437(w338,w336,w337); //  
+ nmos #(1) nmos_AN34_FU34_gc438(w340,w339,w337); //  
+ nmos #(39) nmos_AN35_FU35_gc439(w341,vss,w334); //  
+ pmos #(39) pmos_AN36_FU36_gc440(w341,vdd,w334); //  
+ pmos #(53) pmos_OR37_FU37_gc441(w343,w342,w341); //  
+ pmos #(14) pmos_OR38_FU38_gc442(w342,vdd,w333); //  
+ nmos #(53) nmos_OR39_FU39_gc443(w343,vss,w333); //  
+ nmos #(53) nmos_OR40_FU40_gc444(w343,vss,w341); //  
+ nmos #(62) nmos_OR41_FU41_gc445(w17,vss,w343); //  
+ pmos #(62) pmos_OR42_FU42_gc446(w17,vdd,w343); //  
+ pmos #(43) pmos_NO43_gc447(w318,vdd,w344); //  
+ nmos #(43) nmos_NO44_gc448(w318,vss,w344); //  
+ pmos #(43) pmos_NO45_gc449(w314,vdd,A2); //  
+ nmos #(43) nmos_NO46_gc450(w314,vss,A2); //  
+ pmos #(62) pmos_na47_gc451(w303,vdd,A2); //  
+ pmos #(62) pmos_na48_gc452(w303,vdd,B2); //  
+ nmos #(62) nmos_na49_gc453(w303,w345,A2); //  
+ nmos #(13) nmos_na50_gc454(w345,vss,B2); //  
+ pmos #(40) pmos_XO1_FU51_gc455(w347,vdd,w346); //  
+ nmos #(40) nmos_XO2_FU52_gc456(w347,vss,w346); //  
+ pmos #(66) pmos_XO3_FU53_gc457(w348,w10,w346); //  
+ nmos #(66) nmos_XO4_FU54_gc458(w348,w10,w347); //  
+ pmos #(66) pmos_XO5_FU55_gc459(w348,w346,w10); //  
+ nmos #(66) nmos_XO6_FU56_gc460(w348,w347,w10); //  
+ pmos #(45) pmos_XO7_FU57_gc461(w317,vdd,w349); //  
+ nmos #(45) nmos_XO8_FU58_gc462(w317,vss,w349); //  
+ nmos #(40) nmos_XO9_FU59_gc463(w349,vss,w348); //  
+ pmos #(40) pmos_XO10_FU60_gc464(w349,vdd,w348); //  
+ pmos #(39) pmos_NO11_FU61_gc465(w350,vdd,A2); //  
+ nmos #(39) nmos_NO12_FU62_gc466(w350,vss,A2); //  
+ pmos #(53) pmos_OR13_FU63_gc467(w353,w351,w352); //  
+ pmos #(14) pmos_OR14_FU64_gc468(w351,vdd,w354); //  
+ nmos #(53) nmos_OR15_FU65_gc469(w353,vss,w354); //  
+ nmos #(53) nmos_OR16_FU66_gc470(w353,vss,w352); //  
+ nmos #(62) nmos_OR17_FU67_gc471(w19,vss,w353); //  
+ pmos #(62) pmos_OR18_FU68_gc472(w19,vdd,w353); //  
+ pmos #(40) pmos_XO19_FU69_gc473(w355,vdd,A2); //  
+ nmos #(40) nmos_XO20_FU70_gc474(w355,vss,A2); //  
+ pmos #(66) pmos_XO21_FU71_gc475(w356,B2,A2); //  
+ nmos #(66) nmos_XO22_FU72_gc476(w356,B2,w355); //  
+ pmos #(66) pmos_XO23_FU73_gc477(w356,A2,B2); //  
+ nmos #(66) nmos_XO24_FU74_gc478(w356,w355,B2); //  
+ pmos #(88) pmos_XO25_FU75_gc479(w346,vdd,w357); //  
+ nmos #(88) nmos_XO26_FU76_gc480(w346,vss,w357); //  
+ nmos #(40) nmos_XO27_FU77_gc481(w357,vss,w356); //  
+ pmos #(40) pmos_XO28_FU78_gc482(w357,vdd,w356); //  
+ pmos #(39) pmos_NO29_FU79_gc483(w358,vdd,w346); //  
+ nmos #(39) nmos_NO30_FU80_gc484(w358,vss,w346); //  
+ pmos #(53) pmos_AN31_FU81_gc485(w359,vdd,B2); //  
+ pmos #(53) pmos_AN32_FU82_gc486(w359,vdd,w350); //  
+ nmos #(53) nmos_AN33_FU83_gc487(w359,w360,B2); //  
+ nmos #(14) nmos_AN34_FU84_gc488(w360,vss,w350); //  
+ pmos #(1) pmos_AN35_FU85_gc489(w363,w361,w362); //  
+ nmos #(1) nmos_AN36_FU86_gc490(w365,w364,w362); //  
+ nmos #(39) nmos_AN37_FU87_gc491(w354,vss,w359); //  
+ pmos #(39) pmos_AN38_FU88_gc492(w354,vdd,w359); //  
+ pmos #(53) pmos_AN39_FU89_gc493(w366,vdd,w10); //  
+ pmos #(53) pmos_AN40_FU90_gc494(w366,vdd,w358); //  
+ nmos #(53) nmos_AN41_FU91_gc495(w366,w367,w10); //  
+ nmos #(14) nmos_AN42_FU92_gc496(w367,vss,w358); //  
+ pmos #(1) pmos_AN43_FU93_gc497(w370,w368,w369); //  
+ nmos #(1) nmos_AN44_FU94_gc498(w372,w371,w369); //  
+ nmos #(39) nmos_AN45_FU95_gc499(w352,vss,w366); //  
+ pmos #(39) pmos_AN46_FU96_gc500(w352,vdd,w366); //  
+ pmos #(38) pmos_XN97_gc501(w373,vdd,A2); //  
+ nmos #(38) nmos_XN98_gc502(w373,vss,A2); //  
+ nmos #(36) nmos_XN99_gc503(w344,vss,w374); //  
+ pmos #(36) pmos_XN100_gc504(w344,vdd,w374); //  
+ pmos #(62) pmos_XN101_gc505(w374,B2,A2); //  
+ nmos #(62) nmos_XN102_gc506(w374,B2,w373); //  
+ pmos #(62) pmos_XN103_gc507(w374,A2,B2); //  
+ nmos #(62) nmos_XN104_gc508(w374,w373,B2); //  
+ pmos #(76) pmos_NO105_gc509(w308,w375,B2); //  
+ pmos #(1) pmos_NO106_gc510(w378,w376,w377); //  
+ nmos #(1) nmos_NO107_gc511(w380,w379,w377); //  
+ pmos #(13) pmos_NO108_gc512(w375,vdd,A2); //  
+ nmos #(76) nmos_NO109_gc513(w308,vss,A2); //  
+ nmos #(76) nmos_NO110_gc514(w308,vss,B2); //  
+ mux #(37) mux4_mu111_gc515(w381,S0,S1,w303,w305,w304,w306);
+ mux #(37) mux4_mu112_gc516(w382,S0,S1,w307,w309,w310,w308);
+ mux #(37) mux4_mu113_gc517(w383,S0,S1,w311,w318,w317,w312);
+ mux #(33) mux4_mu114_gc518(out2,S2,S3,w381,w382,w384,w383);
+ mux #(37) mux4_mu115_gc519(w384,S0,S1,w313,w315,w316,w314);
+ mux #(14) mux_mu1_mu116_gc520(w385,w303,w305,S0);
+ mux #(14) mux_mu2_mu117_gc521(w386,w304,w306,S0);
+ mux #(35) mux_mu3_mu118_gc522(w381,w386,w385,S1);
+ mux #(14) mux_mu4_mu119_gc523(w387,w307,w309,S0);
+ mux #(14) mux_mu5_mu120_gc524(w388,w310,w308,S0);
+ mux #(35) mux_mu6_mu121_gc525(w382,w388,w387,S1);
+ mux #(14) mux_mu7_mu122_gc526(w389,w311,w318,S0);
+ mux #(14) mux_mu8_mu123_gc527(w390,w317,w312,S0);
+ mux #(35) mux_mu9_mu124_gc528(w383,w390,w389,S1);
+ mux #(14) mux_mu10_mu125_gc529(w391,w381,w382,S2);
+ mux #(14) mux_mu11_mu126_gc530(w392,w384,w383,S2);
+ mux #(31) mux_mu12_mu127_gc531(out2,w392,w391,S3);
+ mux #(14) mux_mu13_mu128_gc532(w393,w313,w315,S0);
+ mux #(14) mux_mu14_mu129_gc533(w394,w316,w314,S0);
+ mux #(35) mux_mu15_mu130_gc534(w384,w394,w393,S1);
+ pmos #(43) pmos_NO131_gc535(w307,vdd,w308); //  
+ nmos #(43) nmos_NO132_gc536(w307,vss,w308); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 S0=~S0;
+#2000 S1=~S1;
+#4000 S3=~S3;
+#8000 S2=~S2;
+#16000 A0=~A0;
+#32000 B0=~B0;
+#64000 A1=~A1;
+#128000 B2=~B2;
+#256000 A2=~A2;
+#512000 B2=~B2;
+#1024000 A3=~A3;
+#2048000 B3=~B3;
+
+// Simulation parameters
+// S0 CLK 10 10
+// S1 CLK 20 20
+// S3 CLK 40 40
+// S2 CLK 80 80
+// A0 CLK 160 160
+// B0 CLK 320 320
+// A1 CLK 640 640
+// B2 CLK 1280 1280
+// A2 CLK 2560 2560
+// B2 CLK 5120 5120
+// A3 CLK 10240 10240
+// B3 CLK 20480 20480

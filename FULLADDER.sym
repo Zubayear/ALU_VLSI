@@ -1,0 +1,71 @@
+USER SYMBOL by DSCH 2.7a
+DATE 25-Mar-20 11:43:49 PM
+SYM  #FULLADDER
+BB(0,0,40,40)
+TITLE 10 -2  #FULLADDER
+MODEL 6000
+REC(5,5,30,30)
+PIN(0,20,0.00,0.00)X
+PIN(0,30,0.00,0.00)Y
+PIN(0,10,0.00,0.00)Cin
+PIN(40,20,2.00,1.00)Sum
+PIN(40,10,2.00,1.00)Cout
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(0,10,5,10)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,35)
+LIG(5,5,35,5)
+LIG(35,5,35,35)
+LIG(35,35,5,35)
+VLG module FULLADDER( X,Y,Cin,Sum,Cout);
+VLG  input X,Y,Cin;
+VLG  output Sum,Cout;
+VLG  wire w9,w10,w11,w12,w13,w14,w15,w16;
+VLG  wire w17,w18,w19,w20,w21,w22,w23,w24;
+VLG  wire w25,w26,w27,w28,w29,w30;
+VLG  pmos #(33) pmos_XO1(w9,vdd,w2); //  
+VLG  nmos #(33) nmos_XO2(w9,vss,w2); //  
+VLG  pmos #(54) pmos_XO3(w10,Cin,w2); //  
+VLG  nmos #(54) nmos_XO4(w10,Cin,w9); //  
+VLG  pmos #(54) pmos_XO5(w10,w2,Cin); //  
+VLG  nmos #(54) nmos_XO6(w10,w9,Cin); //  
+VLG  pmos #(23) pmos_XO7(Sum,vdd,w11); //  
+VLG  nmos #(23) nmos_XO8(Sum,vss,w11); //  
+VLG  nmos #(33) nmos_XO9(w11,vss,w10); //  
+VLG  pmos #(33) pmos_XO10(w11,vdd,w10); //  
+VLG  pmos #(33) pmos_XO11(w12,vdd,X); //  
+VLG  nmos #(33) nmos_XO12(w12,vss,X); //  
+VLG  pmos #(54) pmos_XO13(w13,Y,X); //  
+VLG  nmos #(54) nmos_XO14(w13,Y,w12); //  
+VLG  pmos #(54) pmos_XO15(w13,X,Y); //  
+VLG  nmos #(54) nmos_XO16(w13,w12,Y); //  
+VLG  pmos #(58) pmos_XO17(w2,vdd,w14); //  
+VLG  nmos #(58) nmos_XO18(w2,vss,w14); //  
+VLG  nmos #(33) nmos_XO19(w14,vss,w13); //  
+VLG  pmos #(33) pmos_XO20(w14,vdd,w13); //  
+VLG  pmos #(44) pmos_AN21(w15,vdd,Cin); //  
+VLG  pmos #(44) pmos_AN22(w15,vdd,w2); //  
+VLG  nmos #(44) nmos_AN23(w15,w16,Cin); //  
+VLG  nmos #(12) nmos_AN24(w16,vss,w2); //  
+VLG  pmos #(1) pmos_AN25(w19,w17,w18); //  
+VLG  nmos #(1) nmos_AN26(w21,w20,w18); //  
+VLG  nmos #(30) nmos_AN27(w6,vss,w15); //  
+VLG  pmos #(30) pmos_AN28(w6,vdd,w15); //  
+VLG  pmos #(44) pmos_AN29(w22,vdd,X); //  
+VLG  pmos #(44) pmos_AN30(w22,vdd,Y); //  
+VLG  nmos #(44) nmos_AN31(w22,w23,X); //  
+VLG  nmos #(12) nmos_AN32(w23,vss,Y); //  
+VLG  pmos #(1) pmos_AN33(w26,w24,w25); //  
+VLG  nmos #(1) nmos_AN34(w28,w27,w25); //  
+VLG  nmos #(30) nmos_AN35(w7,vss,w22); //  
+VLG  pmos #(30) pmos_AN36(w7,vdd,w22); //  
+VLG  pmos #(44) pmos_OR37(w30,w29,w7); //  
+VLG  pmos #(12) pmos_OR38(w29,vdd,w6); //  
+VLG  nmos #(44) nmos_OR39(w30,vss,w6); //  
+VLG  nmos #(44) nmos_OR40(w30,vss,w7); //  
+VLG  nmos #(23) nmos_OR41(Cout,vss,w30); //  
+VLG  pmos #(23) pmos_OR42(Cout,vdd,w30); //  
+VLG endmodule
+FSYM

@@ -1,0 +1,79 @@
+// DSCH 2.7a
+// 29-Mar-20 1:57:35 AM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\Operations\New\mux16_1_new.sch
+
+module mux16_1_new( S1,S0,E8,E11,E9,E10,E14,E13,
+ E15,E12,E6,E5,S2,E2,E1,E3,
+ E0,E4,E7,S3,Y);
+ input S1,S0,E8,E11,E9,E10,E14,E13;
+ input E15,E12,E6,E5,S2,E2,E1,E3;
+ input E0,E4,E7,S3;
+ output Y;
+ wire w26,w27,w28,w29,w30,w31,w32,w33;
+ wire w34,w35;
+ mux #(20) mux4(w7,S0,S1,E10,E11,E8,E9);
+ mux #(20) mux4(w12,S0,S1,E14,E15,E12,E13);
+ mux #(20) mux4(w17,S0,S1,E6,E7,E4,E5);
+ mux #(20) mux4(Y,S2,S3,w7,w12,w20,w17);
+ mux #(20) mux4(w20,S0,S1,E2,E3,E0,E1);
+ mux #(12) mux_mu1(w26,E10,E11,S0);
+ mux #(12) mux_mu2(w27,E8,E9,S0);
+ mux #(12) mux_mu3(w7,w27,w26,S1);
+ mux #(12) mux_mu4(w28,E14,E15,S0);
+ mux #(12) mux_mu5(w29,E12,E13,S0);
+ mux #(12) mux_mu6(w12,w29,w28,S1);
+ mux #(12) mux_mu7(w30,E6,E7,S0);
+ mux #(12) mux_mu8(w31,E4,E5,S0);
+ mux #(12) mux_mu9(w17,w31,w30,S1);
+ mux #(12) mux_mu10(w32,w7,w12,S2);
+ mux #(12) mux_mu11(w33,w20,w17,S2);
+ mux #(12) mux_mu12(Y,w33,w32,S3);
+ mux #(12) mux_mu13(w34,E2,E3,S0);
+ mux #(12) mux_mu14(w35,E0,E1,S0);
+ mux #(12) mux_mu15(w20,w35,w34,S1);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 S1=~S1;
+#2000 S0=~S0;
+#4000 E8=~E8;
+#8000 E11=~E11;
+#16000 E9=~E9;
+#32000 E10=~E10;
+#64000 E14=~E14;
+#128000 E13=~E13;
+#256000 E15=~E15;
+#512000 E12=~E12;
+#1024000 E6=~E6;
+#2048000 E5=~E5;
+#4096000 S2=~S2;
+#8192000 E2=~E2;
+#16384000 E1=~E1;
+#32768000 E3=~E3;
+#65536000 E0=~E0;
+#131072000 E4=~E4;
+#262144000 E7=~E7;
+#524288000 S3=~S3;
+
+// Simulation parameters
+// S1 CLK 10 10
+// S0 CLK 20 20
+// E8 CLK 40 40
+// E11 CLK 80 80
+// E9 CLK 160 160
+// E10 CLK 320 320
+// E14 CLK 640 640
+// E13 CLK 1280 1280
+// E15 CLK 2560 2560
+// E12 CLK 5120 5120
+// E6 CLK 10240 10240
+// E5 CLK 20480 20480
+// S2 CLK 40960 40960
+// E2 CLK 81920 81920
+// E1 CLK 163840 163840
+// E3 CLK 327680 327680
+// E0 CLK 655360 655360
+// E4 CLK 1310720 1310720
+// E7 CLK 2621440 2621440
+// S3 CLK 5242880 5242880

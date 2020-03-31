@@ -1,0 +1,21 @@
+// DSCH 2.7a
+// 29-Mar-20 3:33:25 AM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\NORGATE.sch
+
+module NORGATE( B,A,out1);
+ input B,A;
+ output out1;
+ pmos #(24) pmos(out1,w1,B); // 2.0u 0.12u
+ pmos #(10) pmos(w1,vdd,A); // 2.0u 0.12u
+ nmos #(24) nmos(out1,vss,A); // 1.0u 0.12u
+ nmos #(24) nmos(out1,vss,B); // 1.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 B=~B;
+#2000 A=~A;
+
+// Simulation parameters
+// B CLK 10 10
+// A CLK 20 20

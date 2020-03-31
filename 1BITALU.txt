@@ -1,0 +1,174 @@
+// DSCH 2.7a
+// 28-Mar-20 11:02:40 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\1BITALU.sch
+
+module 1BITALU( Cin,B,Bin,A,S0,S1,S2,S3,
+ Cout,Bout,Out);
+ input Cin,B,Bin,A,S0,S1,S2,S3;
+ output Cout,Bout,Out;
+ wire w29,w30,w31,w32,w33,w34,w35,w36;
+ wire w37,w38,w39,w40,w41,w42,w43,w44;
+ wire w45,w46,w47,w48,w49,w50,w51,w52;
+ wire w53,w54,w55,w56,w57,w58,w59,w60;
+ wire w61,w62,w63,w64,w65,w66,w67,w68;
+ wire w69,w70,w71,w72,w73,w74,w75,w76;
+ wire w77,w78,w79,w80,w81,w82,w83,w84;
+ wire w85,w86,w87,w88,w89,w90,w91,w92;
+ wire w93,w94,w95,w96,w97,w98,w99,w100;
+ wire w101,w102,w103;
+ nand #(41) nand(w9,A,B);
+ mux #(27) mux16_1(Out,S1,S0,w4,w16,w17,w9,w18,w13,w19,w20,w21,w22,S2,w24,w8,w25,w26,w12,w7,S3);
+ pmos #(38) pmos_XO1_FU1(w30,vdd,w29); //  
+ nmos #(38) nmos_XO2_FU2(w30,vss,w29); //  
+ pmos #(62) pmos_XO3_FU3(w31,Cin,w29); //  
+ nmos #(62) nmos_XO4_FU4(w31,Cin,w30); //  
+ pmos #(62) pmos_XO5_FU5(w31,w29,Cin); //  
+ nmos #(62) nmos_XO6_FU6(w31,w30,Cin); //  
+ pmos #(33) pmos_XO7_FU7(w4,vdd,w32); //  
+ nmos #(33) nmos_XO8_FU8(w4,vss,w32); //  
+ nmos #(38) nmos_XO9_FU9(w32,vss,w31); //  
+ pmos #(38) pmos_XO10_FU10(w32,vdd,w31); //  
+ pmos #(38) pmos_XO11_FU11(w33,vdd,A); //  
+ nmos #(38) nmos_XO12_FU12(w33,vss,A); //  
+ pmos #(62) pmos_XO13_FU13(w34,B,A); //  
+ nmos #(62) nmos_XO14_FU14(w34,B,w33); //  
+ pmos #(62) pmos_XO15_FU15(w34,A,B); //  
+ nmos #(62) nmos_XO16_FU16(w34,w33,B); //  
+ pmos #(78) pmos_XO17_FU17(w29,vdd,w35); //  
+ nmos #(78) nmos_XO18_FU18(w29,vss,w35); //  
+ nmos #(38) nmos_XO19_FU19(w35,vss,w34); //  
+ pmos #(38) pmos_XO20_FU20(w35,vdd,w34); //  
+ pmos #(50) pmos_AN21_FU21(w36,vdd,Cin); //  
+ pmos #(50) pmos_AN22_FU22(w36,vdd,w29); //  
+ nmos #(50) nmos_AN23_FU23(w36,w37,Cin); //  
+ nmos #(13) nmos_AN24_FU24(w37,vss,w29); //  
+ pmos #(1) pmos_AN25_FU25(w40,w38,w39); //  
+ nmos #(1) nmos_AN26_FU26(w42,w41,w39); //  
+ nmos #(36) nmos_AN27_FU27(w43,vss,w36); //  
+ pmos #(36) pmos_AN28_FU28(w43,vdd,w36); //  
+ pmos #(50) pmos_AN29_FU29(w44,vdd,A); //  
+ pmos #(50) pmos_AN30_FU30(w44,vdd,B); //  
+ nmos #(50) nmos_AN31_FU31(w44,w45,A); //  
+ nmos #(13) nmos_AN32_FU32(w45,vss,B); //  
+ pmos #(1) pmos_AN33_FU33(w48,w46,w47); //  
+ nmos #(1) nmos_AN34_FU34(w50,w49,w47); //  
+ nmos #(36) nmos_AN35_FU35(w51,vss,w44); //  
+ pmos #(36) pmos_AN36_FU36(w51,vdd,w44); //  
+ pmos #(50) pmos_OR37_FU37(w53,w52,w51); //  
+ pmos #(13) pmos_OR38_FU38(w52,vdd,w43); //  
+ nmos #(50) nmos_OR39_FU39(w53,vss,w43); //  
+ nmos #(50) nmos_OR40_FU40(w53,vss,w51); //  
+ nmos #(26) nmos_OR41_FU41(Cout,vss,w53); //  
+ pmos #(26) pmos_OR42_FU42(Cout,vdd,w53); //  
+ pmos #(30) pmos_NO43(w7,vdd,w6); //  
+ nmos #(30) nmos_NO44(w7,vss,w6); //  
+ pmos #(30) pmos_NO45(w8,vdd,A); //  
+ nmos #(30) nmos_NO46(w8,vss,A); //  
+ pmos #(40) pmos_na47(w9,vdd,A); //  
+ pmos #(40) pmos_na48(w9,vdd,B); //  
+ nmos #(40) nmos_na49(w9,w54,A); //  
+ nmos #(12) nmos_na50(w54,vss,B); //  
+ pmos #(38) pmos_XO1_FU51(w56,vdd,w55); //  
+ nmos #(38) nmos_XO2_FU52(w56,vss,w55); //  
+ pmos #(62) pmos_XO3_FU53(w57,Bin,w55); //  
+ nmos #(62) nmos_XO4_FU54(w57,Bin,w56); //  
+ pmos #(62) pmos_XO5_FU55(w57,w55,Bin); //  
+ nmos #(62) nmos_XO6_FU56(w57,w56,Bin); //  
+ pmos #(33) pmos_XO7_FU57(w12,vdd,w58); //  
+ nmos #(33) nmos_XO8_FU58(w12,vss,w58); //  
+ nmos #(38) nmos_XO9_FU59(w58,vss,w57); //  
+ pmos #(38) pmos_XO10_FU60(w58,vdd,w57); //  
+ pmos #(36) pmos_NO11_FU61(w59,vdd,A); //  
+ nmos #(36) nmos_NO12_FU62(w59,vss,A); //  
+ pmos #(50) pmos_OR13_FU63(w62,w60,w61); //  
+ pmos #(13) pmos_OR14_FU64(w60,vdd,w63); //  
+ nmos #(50) nmos_OR15_FU65(w62,vss,w63); //  
+ nmos #(50) nmos_OR16_FU66(w62,vss,w61); //  
+ nmos #(26) nmos_OR17_FU67(Bout,vss,w62); //  
+ pmos #(26) pmos_OR18_FU68(Bout,vdd,w62); //  
+ pmos #(38) pmos_XO19_FU69(w64,vdd,A); //  
+ nmos #(38) nmos_XO20_FU70(w64,vss,A); //  
+ pmos #(62) pmos_XO21_FU71(w65,B,A); //  
+ nmos #(62) nmos_XO22_FU72(w65,B,w64); //  
+ pmos #(62) pmos_XO23_FU73(w65,A,B); //  
+ nmos #(62) nmos_XO24_FU74(w65,w64,B); //  
+ pmos #(78) pmos_XO25_FU75(w55,vdd,w66); //  
+ nmos #(78) nmos_XO26_FU76(w55,vss,w66); //  
+ nmos #(38) nmos_XO27_FU77(w66,vss,w65); //  
+ pmos #(38) pmos_XO28_FU78(w66,vdd,w65); //  
+ pmos #(36) pmos_NO29_FU79(w67,vdd,w55); //  
+ nmos #(36) nmos_NO30_FU80(w67,vss,w55); //  
+ pmos #(50) pmos_AN31_FU81(w68,vdd,B); //  
+ pmos #(50) pmos_AN32_FU82(w68,vdd,w59); //  
+ nmos #(50) nmos_AN33_FU83(w68,w69,B); //  
+ nmos #(13) nmos_AN34_FU84(w69,vss,w59); //  
+ pmos #(1) pmos_AN35_FU85(w72,w70,w71); //  
+ nmos #(1) nmos_AN36_FU86(w74,w73,w71); //  
+ nmos #(36) nmos_AN37_FU87(w63,vss,w68); //  
+ pmos #(36) pmos_AN38_FU88(w63,vdd,w68); //  
+ pmos #(50) pmos_AN39_FU89(w75,vdd,Bin); //  
+ pmos #(50) pmos_AN40_FU90(w75,vdd,w67); //  
+ nmos #(50) nmos_AN41_FU91(w75,w76,Bin); //  
+ nmos #(13) nmos_AN42_FU92(w76,vss,w67); //  
+ pmos #(1) pmos_AN43_FU93(w79,w77,w78); //  
+ nmos #(1) nmos_AN44_FU94(w81,w80,w78); //  
+ nmos #(36) nmos_AN45_FU95(w61,vss,w75); //  
+ pmos #(36) pmos_AN46_FU96(w61,vdd,w75); //  
+ pmos #(33) pmos_XN97(w82,vdd,A); //  
+ nmos #(33) nmos_XN98(w82,vss,A); //  
+ nmos #(30) nmos_XN99(w6,vss,w83); //  
+ pmos #(30) pmos_XN100(w6,vdd,w83); //  
+ pmos #(54) pmos_XN101(w83,B,A); //  
+ nmos #(54) nmos_XN102(w83,B,w82); //  
+ pmos #(54) pmos_XN103(w83,A,B); //  
+ nmos #(54) nmos_XN104(w83,w82,B); //  
+ pmos #(54) pmos_NO105(w13,w84,B); //  
+ pmos #(1) pmos_NO106(w87,w85,w86); //  
+ nmos #(1) nmos_NO107(w89,w88,w86); //  
+ pmos #(12) pmos_NO108(w84,vdd,A); //  
+ nmos #(54) nmos_NO109(w13,vss,A); //  
+ nmos #(54) nmos_NO110(w13,vss,B); //  
+ mux #(31) mux4_mu111(w90,S0,S1,w9,w16,w4,w17);
+ mux #(31) mux4_mu112(w91,S0,S1,w18,w19,w20,w13);
+ mux #(31) mux4_mu113(w92,S0,S1,w21,w7,w12,w22);
+ mux #(24) mux4_mu114(Out,S2,S3,w90,w91,w93,w92);
+ mux #(31) mux4_mu115(w93,S0,S1,w24,w25,w26,w8);
+ mux #(13) mux_mu1_mu116(w94,w9,w16,S0);
+ mux #(13) mux_mu2_mu117(w95,w4,w17,S0);
+ mux #(27) mux_mu3_mu118(w90,w95,w94,S1);
+ mux #(13) mux_mu4_mu119(w96,w18,w19,S0);
+ mux #(13) mux_mu5_mu120(w97,w20,w13,S0);
+ mux #(27) mux_mu6_mu121(w91,w97,w96,S1);
+ mux #(13) mux_mu7_mu122(w98,w21,w7,S0);
+ mux #(13) mux_mu8_mu123(w99,w12,w22,S0);
+ mux #(27) mux_mu9_mu124(w92,w99,w98,S1);
+ mux #(13) mux_mu10_mu125(w100,w90,w91,S2);
+ mux #(13) mux_mu11_mu126(w101,w93,w92,S2);
+ mux #(20) mux_mu12_mu127(Out,w101,w100,S3);
+ mux #(13) mux_mu13_mu128(w102,w24,w25,S0);
+ mux #(13) mux_mu14_mu129(w103,w26,w8,S0);
+ mux #(27) mux_mu15_mu130(w93,w103,w102,S1);
+ pmos #(30) pmos_NO131(w18,vdd,w13); //  
+ nmos #(30) nmos_NO132(w18,vss,w13); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 Cin=~Cin;
+#2000 B=~B;
+#4000 Bin=~Bin;
+#8000 A=~A;
+#16000 S0=~S0;
+#32000 S1=~S1;
+#64000 S2=~S2;
+#128000 S3=~S3;
+
+// Simulation parameters
+// Cin CLK 10 10
+// B CLK 20 20
+// Bin CLK 40 40
+// A CLK 80 80
+// S0 CLK 160 160
+// S1 CLK 320 320
+// S2 CLK 640 640
+// S3 CLK 1280 1280

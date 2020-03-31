@@ -1,0 +1,45 @@
+// DSCH 2.7a
+// 26-Mar-20 7:08:04 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\2TO1MUX.sch
+
+module 2TO1MUX( S,D1,D0,Y);
+ input S,D1,D0;
+ output Y;
+ wire w8,w9,w10,w11,w12,w13,w14,w15;
+ wire w16,w17,w18,w19,w20,w21,w22,w23;
+ pmos #(30) pmos_NO1(w2,vdd,S); //  
+ nmos #(30) nmos_NO2(w2,vss,S); //  
+ pmos #(44) pmos_AN3(w8,vdd,D0); //  
+ pmos #(44) pmos_AN4(w8,vdd,w2); //  
+ nmos #(44) nmos_AN5(w8,w9,D0); //  
+ nmos #(12) nmos_AN6(w9,vss,w2); //  
+ pmos #(1) pmos_AN7(w12,w10,w11); //  
+ nmos #(1) nmos_AN8(w14,w13,w11); //  
+ nmos #(30) nmos_AN9(w4,vss,w8); //  
+ pmos #(30) pmos_AN10(w4,vdd,w8); //  
+ pmos #(44) pmos_AN11(w15,vdd,D1); //  
+ pmos #(44) pmos_AN12(w15,vdd,S); //  
+ nmos #(44) nmos_AN13(w15,w16,D1); //  
+ nmos #(12) nmos_AN14(w16,vss,S); //  
+ pmos #(1) pmos_AN15(w19,w17,w18); //  
+ nmos #(1) nmos_AN16(w21,w20,w18); //  
+ nmos #(30) nmos_AN17(w6,vss,w15); //  
+ pmos #(30) pmos_AN18(w6,vdd,w15); //  
+ pmos #(44) pmos_OR19(w23,w22,w6); //  
+ pmos #(12) pmos_OR20(w22,vdd,w4); //  
+ nmos #(44) nmos_OR21(w23,vss,w4); //  
+ nmos #(44) nmos_OR22(w23,vss,w6); //  
+ nmos #(23) nmos_OR23(Y,vss,w23); //  
+ pmos #(23) pmos_OR24(Y,vdd,w23); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 S=~S;
+#2000 D1=~D1;
+#4000 D0=~D0;
+
+// Simulation parameters
+// S CLK 10 10
+// D1 CLK 20 20
+// D0 CLK 40 40

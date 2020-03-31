@@ -1,0 +1,529 @@
+// DSCH 2.7a
+// 27-Mar-20 12:21:01 AM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\Complete.sch
+
+module Complete( OP0,OP1,OP2,OP3,OP9,OP8,OP7,OP6,
+ OP5,OP4,OP11,OP10,Carry,out0,out1,out2,
+ out3,Sign);
+ input OP0,OP1,OP2,OP3,OP9,OP8,OP7,OP6;
+ input OP5,OP4,OP11,OP10;
+ output Carry,out0,out1,out2,out3,Sign;
+ wire w19,w20,w21,w22,w23,w24,w25,w26;
+ wire w27,w28,w29,w30,w31,w32,w33,w34;
+ wire w35,w36,w37,w38,w39,w40,w41,w42;
+ wire w43,w44,w45,w46,w47,w48,w49,w50;
+ wire w51,w52,w53,w54,w55,w56,w57,w58;
+ wire w59,w60,w61,w62,w63,w64,w65,w66;
+ wire w67,w68,w69,w70,w71,w72,w73,w74;
+ wire w75,w76,w77,w78,w79,w80,w81,w82;
+ wire w83,w84,w85,w86,w87,w88,w89,w90;
+ wire w91,w92,w93,w94,w95,w96,w97,w98;
+ wire w99,w100,w101,w102,w103,w104,w105,w106;
+ wire w107,w108,w109,w110,w111,w112,w113,w114;
+ wire w115,w116,w117,w118,w119,w120,w121,w122;
+ wire w123,w124,w125,w126,w127,w128,w129,w130;
+ wire w131,w132,w133,w134,w135,w136,w137,w138;
+ wire w139,w140,w141,w142,w143,w144,w145,w146;
+ wire w147,w148,w149,w150,w151,w152,w153,w154;
+ wire w155,w156,w157,w158,w159,w160,w161,w162;
+ wire w163,w164,w165,w166,w167,w168,w169,w170;
+ wire w171,w172,w173,w174,w175,w176,w177,w178;
+ wire w179,w180,w181,w182,w183,w184,w185,w186;
+ wire w187,w188,w189,w190,w191,w192,w193,w194;
+ wire w195,w196,w197,w198,w199,w200,w201,w202;
+ wire w203,w204,w205,w206,w207,w208,w209,w210;
+ wire w211,w212,w213,w214,w215,w216,w217,w218;
+ wire w219,w220,w221,w222,w223,w224,w225,w226;
+ wire w227,w228,w229,w230,w231,w232,w233,w234;
+ wire w235,w236,w237,w238,w239,w240,w241,w242;
+ wire w243,w244,w245,w246,w247,w248,w249,w250;
+ wire w251,w252,w253,w254,w255,w256,w257,w258;
+ wire w259,w260,w261,w262,w263,w264,w265,w266;
+ wire w267,w268,w269,w270,w271,w272,w273,w274;
+ wire w275,w276,w277,w278,w279,w280,w281,w282;
+ wire w283,w284,w285,w286,w287,w288,w289,w290;
+ wire w291,w292,w293,w294,w295,w296,w297,w298;
+ wire w299,w300,w301,w302,w303,w304,w305,w306;
+ wire w307,w308,w309,w310,w311,w312,w313,w314;
+ wire w315,w316,w317,w318,w319,w320,w321,w322;
+ wire w323,w324,w325,w326,w327,w328,w329,w330;
+ wire w331,w332,w333,w334,w335,w336,w337,w338;
+ wire w339,w340,w341,w342,w343,w344,w345,w346;
+ wire w347,w348,w349,w350,w351,w352,w353,w354;
+ wire w355,w356,w357,w358,w359,w360,w361,w362;
+ wire w363,w364,w365,w366,w367,w368,w369,w370;
+ wire w371,w372,w373,w374,w375,w376,w377,w378;
+ wire w379,w380,w381,w382,w383,w384,w385,w386;
+ wire w387,w388,w389,w390;
+ nand #(63) nand_1B1_AL1(w19,OP2,OP6);
+ pmos #(41) pmos_XO1_FU1_1B2_AL2(w21,vdd,w20); //  
+ nmos #(41) nmos_XO2_FU2_1B3_AL3(w21,vss,w20); //  
+ pmos #(68) pmos_XO3_FU3_1B4_AL4(w23,w22,w20); //  
+ nmos #(68) nmos_XO4_FU4_1B5_AL5(w23,w22,w21); //  
+ pmos #(68) pmos_XO5_FU5_1B6_AL6(w23,w20,w22); //  
+ nmos #(68) nmos_XO6_FU6_1B7_AL7(w23,w21,w22); //  
+ pmos #(40) pmos_XO7_FU7_1B8_AL8(w25,vdd,w24); //  
+ nmos #(40) nmos_XO8_FU8_1B9_AL9(w25,vss,w24); //  
+ nmos #(41) nmos_XO9_FU9_1B10_AL10(w24,vss,w23); //  
+ pmos #(41) pmos_XO10_FU10_1B11_AL11(w24,vdd,w23); //  
+ pmos #(41) pmos_XO11_FU11_1B12_AL12(w26,vdd,OP2); //  
+ nmos #(41) nmos_XO12_FU12_1B13_AL13(w26,vss,OP2); //  
+ pmos #(68) pmos_XO13_FU13_1B14_AL14(w27,OP6,OP2); //  
+ nmos #(68) nmos_XO14_FU14_1B15_AL15(w27,OP6,w26); //  
+ pmos #(68) pmos_XO15_FU15_1B16_AL16(w27,OP2,OP6); //  
+ nmos #(68) nmos_XO16_FU16_1B17_AL17(w27,w26,OP6); //  
+ pmos #(93) pmos_XO17_FU17_1B18_AL18(w20,vdd,w28); //  
+ nmos #(93) nmos_XO18_FU18_1B19_AL19(w20,vss,w28); //  
+ nmos #(41) nmos_XO19_FU19_1B20_AL20(w28,vss,w27); //  
+ pmos #(41) pmos_XO20_FU20_1B21_AL21(w28,vdd,w27); //  
+ pmos #(55) pmos_AN21_FU21_1B22_AL22(w29,vdd,w22); //  
+ pmos #(55) pmos_AN22_FU22_1B23_AL23(w29,vdd,w20); //  
+ nmos #(55) nmos_AN23_FU23_1B24_AL24(w29,w30,w22); //  
+ nmos #(14) nmos_AN24_FU24_1B25_AL25(w30,vss,w20); //  
+ pmos #(1) pmos_AN25_FU25_1B26_AL26(w33,w31,w32); //  
+ nmos #(1) nmos_AN26_FU26_1B27_AL27(w35,w34,w32); //  
+ nmos #(41) nmos_AN27_FU27_1B28_AL28(w36,vss,w29); //  
+ pmos #(41) pmos_AN28_FU28_1B29_AL29(w36,vdd,w29); //  
+ pmos #(55) pmos_AN29_FU29_1B30_AL30(w37,vdd,OP2); //  
+ pmos #(55) pmos_AN30_FU30_1B31_AL31(w37,vdd,OP6); //  
+ nmos #(55) nmos_AN31_FU31_1B32_AL32(w37,w38,OP2); //  
+ nmos #(14) nmos_AN32_FU32_1B33_AL33(w38,vss,OP6); //  
+ pmos #(1) pmos_AN33_FU33_1B34_AL34(w41,w39,w40); //  
+ nmos #(1) nmos_AN34_FU34_1B35_AL35(w43,w42,w40); //  
+ nmos #(41) nmos_AN35_FU35_1B36_AL36(w44,vss,w37); //  
+ pmos #(41) pmos_AN36_FU36_1B37_AL37(w44,vdd,w37); //  
+ pmos #(55) pmos_OR37_FU37_1B38_AL38(w46,w45,w44); //  
+ pmos #(14) pmos_OR38_FU38_1B39_AL39(w45,vdd,w36); //  
+ nmos #(55) nmos_OR39_FU39_1B40_AL40(w46,vss,w36); //  
+ nmos #(55) nmos_OR40_FU40_1B41_AL41(w46,vss,w44); //  
+ nmos #(38) nmos_OR41_FU41_1B42_AL42(w47,vss,w46); //  
+ pmos #(38) pmos_OR42_FU42_1B43_AL43(w47,vdd,w46); //  
+ pmos #(53) pmos_AN43_1B44_AL44(w48,vdd,OP2); //  
+ pmos #(53) pmos_AN44_1B45_AL45(w48,vdd,OP6); //  
+ nmos #(53) nmos_AN45_1B46_AL46(w48,w49,OP2); //  
+ nmos #(14) nmos_AN46_1B47_AL47(w49,vss,OP6); //  
+ pmos #(1) pmos_AN47_1B48_AL48(w52,w50,w51); //  
+ nmos #(1) nmos_AN48_1B49_AL49(w54,w53,w51); //  
+ nmos #(39) nmos_AN49_1B50_AL50(w55,vss,w48); //  
+ pmos #(39) pmos_AN50_1B51_AL51(w55,vdd,w48); //  
+ pmos #(39) pmos_NO51_1B52_AL52(w56,vdd,OP2); //  
+ nmos #(39) nmos_NO52_1B53_AL53(w56,vss,OP2); //  
+ pmos #(63) pmos_na53_1B54_AL54(w19,vdd,OP2); //  
+ pmos #(63) pmos_na54_1B55_AL55(w19,vdd,OP6); //  
+ nmos #(63) nmos_na55_1B56_AL56(w19,w57,OP2); //  
+ nmos #(14) nmos_na56_1B57_AL57(w57,vss,OP6); //  
+ pmos #(41) pmos_XO1_FU57_1B58_AL58(w59,vdd,w58); //  
+ nmos #(41) nmos_XO2_FU58_1B59_AL59(w59,vss,w58); //  
+ pmos #(68) pmos_XO3_FU59_1B60_AL60(w61,w60,w58); //  
+ nmos #(68) nmos_XO4_FU60_1B61_AL61(w61,w60,w59); //  
+ pmos #(68) pmos_XO5_FU61_1B62_AL62(w61,w58,w60); //  
+ nmos #(68) nmos_XO6_FU62_1B63_AL63(w61,w59,w60); //  
+ pmos #(40) pmos_XO7_FU63_1B64_AL64(w63,vdd,w62); //  
+ nmos #(40) nmos_XO8_FU64_1B65_AL65(w63,vss,w62); //  
+ nmos #(41) nmos_XO9_FU65_1B66_AL66(w62,vss,w61); //  
+ pmos #(41) pmos_XO10_FU66_1B67_AL67(w62,vdd,w61); //  
+ pmos #(41) pmos_NO11_FU67_1B68_AL68(w64,vdd,OP2); //  
+ nmos #(41) nmos_NO12_FU68_1B69_AL69(w64,vss,OP2); //  
+ pmos #(55) pmos_OR13_FU69_1B70_AL70(w67,w65,w66); //  
+ pmos #(14) pmos_OR14_FU70_1B71_AL71(w65,vdd,w68); //  
+ nmos #(55) nmos_OR15_FU71_1B72_AL72(w67,vss,w68); //  
+ nmos #(55) nmos_OR16_FU72_1B73_AL73(w67,vss,w66); //  
+ nmos #(38) nmos_OR17_FU73_1B74_AL74(w69,vss,w67); //  
+ pmos #(38) pmos_OR18_FU74_1B75_AL75(w69,vdd,w67); //  
+ pmos #(41) pmos_XO19_FU75_1B76_AL76(w70,vdd,OP2); //  
+ nmos #(41) nmos_XO20_FU76_1B77_AL77(w70,vss,OP2); //  
+ pmos #(68) pmos_XO21_FU77_1B78_AL78(w71,OP6,OP2); //  
+ nmos #(68) nmos_XO22_FU78_1B79_AL79(w71,OP6,w70); //  
+ pmos #(68) pmos_XO23_FU79_1B80_AL80(w71,OP2,OP6); //  
+ nmos #(68) nmos_XO24_FU80_1B81_AL81(w71,w70,OP6); //  
+ pmos #(93) pmos_XO25_FU81_1B82_AL82(w58,vdd,w72); //  
+ nmos #(93) nmos_XO26_FU82_1B83_AL83(w58,vss,w72); //  
+ nmos #(41) nmos_XO27_FU83_1B84_AL84(w72,vss,w71); //  
+ pmos #(41) pmos_XO28_FU84_1B85_AL85(w72,vdd,w71); //  
+ pmos #(41) pmos_NO29_FU85_1B86_AL86(w73,vdd,w58); //  
+ nmos #(41) nmos_NO30_FU86_1B87_AL87(w73,vss,w58); //  
+ pmos #(55) pmos_AN31_FU87_1B88_AL88(w74,vdd,OP6); //  
+ pmos #(55) pmos_AN32_FU88_1B89_AL89(w74,vdd,w64); //  
+ nmos #(55) nmos_AN33_FU89_1B90_AL90(w74,w75,OP6); //  
+ nmos #(14) nmos_AN34_FU90_1B91_AL91(w75,vss,w64); //  
+ pmos #(1) pmos_AN35_FU91_1B92_AL92(w78,w76,w77); //  
+ nmos #(1) nmos_AN36_FU92_1B93_AL93(w80,w79,w77); //  
+ nmos #(41) nmos_AN37_FU93_1B94_AL94(w68,vss,w74); //  
+ pmos #(41) pmos_AN38_FU94_1B95_AL95(w68,vdd,w74); //  
+ pmos #(55) pmos_AN39_FU95_1B96_AL96(w81,vdd,w60); //  
+ pmos #(55) pmos_AN40_FU96_1B97_AL97(w81,vdd,w73); //  
+ nmos #(55) nmos_AN41_FU97_1B98_AL98(w81,w82,w60); //  
+ nmos #(14) nmos_AN42_FU98_1B99_AL99(w82,vss,w73); //  
+ pmos #(1) pmos_AN43_FU99_1B100_AL100(w85,w83,w84); //  
+ nmos #(1) nmos_AN44_FU100_1B101_AL101(w87,w86,w84); //  
+ nmos #(41) nmos_AN45_FU101_1B102_AL102(w66,vss,w81); //  
+ pmos #(41) pmos_AN46_FU102_1B103_AL103(w66,vdd,w81); //  
+ pmos #(40) pmos_XN103_1B104_AL104(w88,vdd,OP2); //  
+ nmos #(40) nmos_XN104_1B105_AL105(w88,vss,OP2); //  
+ nmos #(39) nmos_XN105_1B106_AL106(w90,vss,w89); //  
+ pmos #(39) pmos_XN106_1B107_AL107(w90,vdd,w89); //  
+ pmos #(66) pmos_XN107_1B108_AL108(w89,OP6,OP2); //  
+ nmos #(66) nmos_XN108_1B109_AL109(w89,OP6,w88); //  
+ pmos #(66) pmos_XN109_1B110_AL110(w89,OP2,OP6); //  
+ nmos #(66) nmos_XN110_1B111_AL111(w89,w88,OP6); //  
+ pmos #(52) pmos_NO111_1B112_AL112(w92,w91,OP6); //  
+ pmos #(1) pmos_NO112_1B113_AL113(w95,w93,w94); //  
+ nmos #(1) nmos_NO113_1B114_AL114(w97,w96,w94); //  
+ pmos #(14) pmos_NO114_1B115_AL115(w91,vdd,OP2); //  
+ nmos #(52) nmos_NO115_1B116_AL116(w92,vss,OP2); //  
+ nmos #(52) nmos_NO116_1B117_AL117(w92,vss,OP6); //  
+ pmos #(42) pmos_NO1_2T1_8T1_16117_1B118_AL118(w98,vdd,OP10); //  
+ nmos #(42) nmos_NO2_2T2_8T2_16118_1B119_AL119(w98,vss,OP10); //  
+ pmos #(56) pmos_AN3_2T3_8T3_16119_1B120_AL120(w100,vdd,w99); //  
+ pmos #(56) pmos_AN4_2T4_8T4_16120_1B121_AL121(w100,vdd,w98); //  
+ nmos #(56) nmos_AN5_2T5_8T5_16121_1B122_AL122(w100,w101,w99); //  
+ nmos #(14) nmos_AN6_2T6_8T6_16122_1B123_AL123(w101,vss,w98); //  
+ pmos #(1) pmos_AN7_2T7_8T7_16123_1B124_AL124(w104,w102,w103); //  
+ nmos #(1) nmos_AN8_2T8_8T8_16124_1B125_AL125(w106,w105,w103); //  
+ nmos #(42) nmos_AN9_2T9_8T9_16125_1B126_AL126(w107,vss,w100); //  
+ pmos #(42) pmos_AN10_2T10_8T10_16126_1B127_AL127(w107,vdd,w100); //  
+ pmos #(56) pmos_AN11_2T11_8T11_16127_1B128_AL128(w109,vdd,w108); //  
+ pmos #(56) pmos_AN12_2T12_8T12_16128_1B129_AL129(w109,vdd,OP10); //  
+ nmos #(56) nmos_AN13_2T13_8T13_16129_1B130_AL130(w109,w110,w108); //  
+ nmos #(14) nmos_AN14_2T14_8T14_16130_1B131_AL131(w110,vss,OP10); //  
+ pmos #(1) pmos_AN15_2T15_8T15_16131_1B132_AL132(w113,w111,w112); //  
+ nmos #(1) nmos_AN16_2T16_8T16_16132_1B133_AL133(w115,w114,w112); //  
+ nmos #(42) nmos_AN17_2T17_8T17_16133_1B134_AL134(w116,vss,w109); //  
+ pmos #(42) pmos_AN18_2T18_8T18_16134_1B135_AL135(w116,vdd,w109); //  
+ pmos #(56) pmos_OR19_2T19_8T19_16135_1B136_AL136(w118,w117,w116); //  
+ pmos #(14) pmos_OR20_2T20_8T20_16136_1B137_AL137(w117,vdd,w107); //  
+ nmos #(56) nmos_OR21_2T21_8T21_16137_1B138_AL138(w118,vss,w107); //  
+ nmos #(56) nmos_OR22_2T22_8T22_16138_1B139_AL139(w118,vss,w116); //  
+ nmos #(20) nmos_OR23_2T23_8T23_16139_1B140_AL140(w119,vss,w118); //  
+ pmos #(20) pmos_OR24_2T24_8T24_16140_1B141_AL141(w119,vdd,w118); //  
+ pmos #(56) pmos_AN1_4T25_8T25_16141_1B142_AL142(w121,vdd,w120); //  
+ pmos #(56) pmos_AN2_4T26_8T26_16142_1B143_AL143(w121,vdd,w122); //  
+ nmos #(56) nmos_AN3_4T27_8T27_16143_1B144_AL144(w121,w123,w120); //  
+ nmos #(14) nmos_AN4_4T28_8T28_16144_1B145_AL145(w123,vss,w122); //  
+ pmos #(1) pmos_AN5_4T29_8T29_16145_1B146_AL146(w126,w124,w125); //  
+ nmos #(1) nmos_AN6_4T30_8T30_16146_1B147_AL147(w128,w127,w125); //  
+ nmos #(42) nmos_AN7_4T31_8T31_16147_1B148_AL148(w129,vss,w121); //  
+ pmos #(42) pmos_AN8_4T32_8T32_16148_1B149_AL149(w129,vdd,w121); //  
+ pmos #(56) pmos_AN9_4T33_8T33_16149_1B150_AL150(w131,vdd,w130); //  
+ pmos #(56) pmos_AN10_4T34_8T34_16150_1B151_AL151(w131,vdd,w132); //  
+ nmos #(56) nmos_AN11_4T35_8T35_16151_1B152_AL152(w131,w133,w130); //  
+ nmos #(14) nmos_AN12_4T36_8T36_16152_1B153_AL153(w133,vss,w132); //  
+ pmos #(1) pmos_AN13_4T37_8T37_16153_1B154_AL154(w136,w134,w135); //  
+ nmos #(1) nmos_AN14_4T38_8T38_16154_1B155_AL155(w138,w137,w135); //  
+ nmos #(42) nmos_AN15_4T39_8T39_16155_1B156_AL156(w139,vss,w131); //  
+ pmos #(42) pmos_AN16_4T40_8T40_16156_1B157_AL157(w139,vdd,w131); //  
+ pmos #(56) pmos_AN17_4T41_8T41_16157_1B158_AL158(w140,vdd,w92); //  
+ pmos #(56) pmos_AN18_4T42_8T42_16158_1B159_AL159(w140,vdd,w141); //  
+ nmos #(56) nmos_AN19_4T43_8T43_16159_1B160_AL160(w140,w142,w92); //  
+ nmos #(14) nmos_AN20_4T44_8T44_16160_1B161_AL161(w142,vss,w141); //  
+ pmos #(1) pmos_AN21_4T45_8T45_16161_1B162_AL162(w145,w143,w144); //  
+ nmos #(1) nmos_AN22_4T46_8T46_16162_1B163_AL163(w147,w146,w144); //  
+ nmos #(42) nmos_AN23_4T47_8T47_16163_1B164_AL164(w148,vss,w140); //  
+ pmos #(42) pmos_AN24_4T48_8T48_16164_1B165_AL165(w148,vdd,w140); //  
+ pmos #(56) pmos_AN25_4T49_8T49_16165_1B166_AL166(w150,vdd,w149); //  
+ pmos #(56) pmos_AN26_4T50_8T50_16166_1B167_AL167(w150,vdd,w151); //  
+ nmos #(56) nmos_AN27_4T51_8T51_16167_1B168_AL168(w150,w152,w149); //  
+ nmos #(14) nmos_AN28_4T52_8T52_16168_1B169_AL169(w152,vss,w151); //  
+ pmos #(1) pmos_AN29_4T53_8T53_16169_1B170_AL170(w155,w153,w154); //  
+ nmos #(1) nmos_AN30_4T54_8T54_16170_1B171_AL171(w157,w156,w154); //  
+ nmos #(42) nmos_AN31_4T55_8T55_16171_1B172_AL172(w158,vss,w150); //  
+ pmos #(42) pmos_AN32_4T56_8T56_16172_1B173_AL173(w158,vdd,w150); //  
+ pmos #(56) pmos_AN33_4T57_8T57_16173_1B174_AL174(w159,vdd,OP9); //  
+ pmos #(56) pmos_AN34_4T58_8T58_16174_1B175_AL175(w159,vdd,OP8); //  
+ nmos #(56) nmos_AN35_4T59_8T59_16175_1B176_AL176(w159,w160,OP9); //  
+ nmos #(14) nmos_AN36_4T60_8T60_16176_1B177_AL177(w160,vss,OP8); //  
+ pmos #(1) pmos_AN37_4T61_8T61_16177_1B178_AL178(w163,w161,w162); //  
+ nmos #(1) nmos_AN38_4T62_8T62_16178_1B179_AL179(w165,w164,w162); //  
+ nmos #(42) nmos_AN39_4T63_8T63_16179_1B180_AL180(w151,vss,w159); //  
+ pmos #(42) pmos_AN40_4T64_8T64_16180_1B181_AL181(w151,vdd,w159); //  
+ pmos #(56) pmos_AN41_4T65_8T65_16181_1B182_AL182(w166,vdd,OP9); //  
+ pmos #(56) pmos_AN42_4T66_8T66_16182_1B183_AL183(w166,vdd,w167); //  
+ nmos #(56) nmos_AN43_4T67_8T67_16183_1B184_AL184(w166,w168,OP9); //  
+ nmos #(14) nmos_AN44_4T68_8T68_16184_1B185_AL185(w168,vss,w167); //  
+ pmos #(1) pmos_AN45_4T69_8T69_16185_1B186_AL186(w171,w169,w170); //  
+ nmos #(1) nmos_AN46_4T70_8T70_16186_1B187_AL187(w173,w172,w170); //  
+ nmos #(42) nmos_AN47_4T71_8T71_16187_1B188_AL188(w141,vss,w166); //  
+ pmos #(42) pmos_AN48_4T72_8T72_16188_1B189_AL189(w141,vdd,w166); //  
+ pmos #(56) pmos_AN49_4T73_8T73_16189_1B190_AL190(w174,vdd,w167); //  
+ pmos #(56) pmos_AN50_4T74_8T74_16190_1B191_AL191(w174,vdd,w175); //  
+ nmos #(56) nmos_AN51_4T75_8T75_16191_1B192_AL192(w174,w176,w167); //  
+ nmos #(14) nmos_AN52_4T76_8T76_16192_1B193_AL193(w176,vss,w175); //  
+ pmos #(1) pmos_AN53_4T77_8T77_16193_1B194_AL194(w179,w177,w178); //  
+ nmos #(1) nmos_AN54_4T78_8T78_16194_1B195_AL195(w181,w180,w178); //  
+ nmos #(42) nmos_AN55_4T79_8T79_16195_1B196_AL196(w132,vss,w174); //  
+ pmos #(42) pmos_AN56_4T80_8T80_16196_1B197_AL197(w132,vdd,w174); //  
+ pmos #(56) pmos_AN57_4T81_8T81_16197_1B198_AL198(w182,vdd,OP8); //  
+ pmos #(56) pmos_AN58_4T82_8T82_16198_1B199_AL199(w182,vdd,w175); //  
+ nmos #(56) nmos_AN59_4T83_8T83_16199_1B200_AL200(w182,w183,OP8); //  
+ nmos #(14) nmos_AN60_4T84_8T84_16200_1B201_AL201(w183,vss,w175); //  
+ pmos #(1) pmos_AN61_4T85_8T85_16201_1B202_AL202(w186,w184,w185); //  
+ nmos #(1) nmos_AN62_4T86_8T86_16202_1B203_AL203(w188,w187,w185); //  
+ nmos #(42) nmos_AN63_4T87_8T87_16203_1B204_AL204(w122,vss,w182); //  
+ pmos #(42) pmos_AN64_4T88_8T88_16204_1B205_AL205(w122,vdd,w182); //  
+ pmos #(56) pmos_OR65_4T89_8T89_16205_1B206_AL206(w190,w189,w139); //  
+ pmos #(14) pmos_OR66_4T90_8T90_16206_1B207_AL207(w189,vdd,w129); //  
+ nmos #(56) nmos_OR67_4T91_8T91_16207_1B208_AL208(w190,vss,w129); //  
+ nmos #(56) nmos_OR68_4T92_8T92_16208_1B209_AL209(w190,vss,w139); //  
+ nmos #(42) nmos_OR69_4T93_8T93_16209_1B210_AL210(w191,vss,w190); //  
+ pmos #(42) pmos_OR70_4T94_8T94_16210_1B211_AL211(w191,vdd,w190); //  
+ pmos #(56) pmos_OR71_4T95_8T95_16211_1B212_AL212(w193,w192,w148); //  
+ pmos #(14) pmos_OR72_4T96_8T96_16212_1B213_AL213(w192,vdd,w158); //  
+ nmos #(56) nmos_OR73_4T97_8T97_16213_1B214_AL214(w193,vss,w158); //  
+ nmos #(56) nmos_OR74_4T98_8T98_16214_1B215_AL215(w193,vss,w148); //  
+ nmos #(42) nmos_OR75_4T99_8T99_16215_1B216_AL216(w194,vss,w193); //  
+ pmos #(42) pmos_OR76_4T100_8T100_16216_1B217_AL217(w194,vdd,w193); //  
+ pmos #(56) pmos_OR77_4T101_8T101_16217_1B218_AL218(w196,w195,w191); //  
+ pmos #(14) pmos_OR78_4T102_8T102_16218_1B219_AL219(w195,vdd,w194); //  
+ nmos #(56) nmos_OR79_4T103_8T103_16219_1B220_AL220(w196,vss,w194); //  
+ nmos #(56) nmos_OR80_4T104_8T104_16220_1B221_AL221(w196,vss,w191); //  
+ nmos #(42) nmos_OR81_4T105_8T105_16221_1B222_AL222(w108,vss,w196); //  
+ pmos #(42) pmos_OR82_4T106_8T106_16222_1B223_AL223(w108,vdd,w196); //  
+ pmos #(70) pmos_NO83_4T107_8T107_16223_1B224_AL224(w175,vdd,OP9); //  
+ nmos #(70) nmos_NO84_4T108_8T108_16224_1B225_AL225(w175,vss,OP9); //  
+ pmos #(70) pmos_NO85_4T109_8T109_16225_1B226_AL226(w167,vdd,OP8); //  
+ nmos #(70) nmos_NO86_4T110_8T110_16226_1B227_AL227(w167,vss,OP8); //  
+ pmos #(56) pmos_AN1_4T111_8T111_16227_1B228_AL228(w197,vdd,w56); //  
+ pmos #(56) pmos_AN2_4T112_8T112_16228_1B229_AL229(w197,vdd,w198); //  
+ nmos #(56) nmos_AN3_4T113_8T113_16229_1B230_AL230(w197,w199,w56); //  
+ nmos #(14) nmos_AN4_4T114_8T114_16230_1B231_AL231(w199,vss,w198); //  
+ pmos #(1) pmos_AN5_4T115_8T115_16231_1B232_AL232(w202,w200,w201); //  
+ nmos #(1) nmos_AN6_4T116_8T116_16232_1B233_AL233(w204,w203,w201); //  
+ nmos #(42) nmos_AN7_4T117_8T117_16233_1B234_AL234(w205,vss,w197); //  
+ pmos #(42) pmos_AN8_4T118_8T118_16234_1B235_AL235(w205,vdd,w197); //  
+ pmos #(56) pmos_AN9_4T119_8T119_16235_1B236_AL236(w207,vdd,w206); //  
+ pmos #(56) pmos_AN10_4T120_8T120_16236_1B237_AL237(w207,vdd,w208); //  
+ nmos #(56) nmos_AN11_4T121_8T121_16237_1B238_AL238(w207,w209,w206); //  
+ nmos #(14) nmos_AN12_4T122_8T122_16238_1B239_AL239(w209,vss,w208); //  
+ pmos #(1) pmos_AN13_4T123_8T123_16239_1B240_AL240(w212,w210,w211); //  
+ nmos #(1) nmos_AN14_4T124_8T124_16240_1B241_AL241(w214,w213,w211); //  
+ nmos #(42) nmos_AN15_4T125_8T125_16241_1B242_AL242(w215,vss,w207); //  
+ pmos #(42) pmos_AN16_4T126_8T126_16242_1B243_AL243(w215,vdd,w207); //  
+ pmos #(56) pmos_AN17_4T127_8T127_16243_1B244_AL244(w216,vdd,w63); //  
+ pmos #(56) pmos_AN18_4T128_8T128_16244_1B245_AL245(w216,vdd,w217); //  
+ nmos #(56) nmos_AN19_4T129_8T129_16245_1B246_AL246(w216,w218,w63); //  
+ nmos #(14) nmos_AN20_4T130_8T130_16246_1B247_AL247(w218,vss,w217); //  
+ pmos #(1) pmos_AN21_4T131_8T131_16247_1B248_AL248(w221,w219,w220); //  
+ nmos #(1) nmos_AN22_4T132_8T132_16248_1B249_AL249(w223,w222,w220); //  
+ nmos #(42) nmos_AN23_4T133_8T133_16249_1B250_AL250(w224,vss,w216); //  
+ pmos #(42) pmos_AN24_4T134_8T134_16250_1B251_AL251(w224,vdd,w216); //  
+ pmos #(56) pmos_AN25_4T135_8T135_16251_1B252_AL252(w225,vdd,w90); //  
+ pmos #(56) pmos_AN26_4T136_8T136_16252_1B253_AL253(w225,vdd,w226); //  
+ nmos #(56) nmos_AN27_4T137_8T137_16253_1B254_AL254(w225,w227,w90); //  
+ nmos #(14) nmos_AN28_4T138_8T138_16254_1B255_AL255(w227,vss,w226); //  
+ pmos #(1) pmos_AN29_4T139_8T139_16255_1B256_AL256(w230,w228,w229); //  
+ nmos #(1) nmos_AN30_4T140_8T140_16256_1B257_AL257(w232,w231,w229); //  
+ nmos #(42) nmos_AN31_4T141_8T141_16257_1B258_AL258(w233,vss,w225); //  
+ pmos #(42) pmos_AN32_4T142_8T142_16258_1B259_AL259(w233,vdd,w225); //  
+ pmos #(56) pmos_AN33_4T143_8T143_16259_1B260_AL260(w234,vdd,OP9); //  
+ pmos #(56) pmos_AN34_4T144_8T144_16260_1B261_AL261(w234,vdd,OP8); //  
+ nmos #(56) nmos_AN35_4T145_8T145_16261_1B262_AL262(w234,w235,OP9); //  
+ nmos #(14) nmos_AN36_4T146_8T146_16262_1B263_AL263(w235,vss,OP8); //  
+ pmos #(1) pmos_AN37_4T147_8T147_16263_1B264_AL264(w238,w236,w237); //  
+ nmos #(1) nmos_AN38_4T148_8T148_16264_1B265_AL265(w240,w239,w237); //  
+ nmos #(42) nmos_AN39_4T149_8T149_16265_1B266_AL266(w226,vss,w234); //  
+ pmos #(42) pmos_AN40_4T150_8T150_16266_1B267_AL267(w226,vdd,w234); //  
+ pmos #(56) pmos_AN41_4T151_8T151_16267_1B268_AL268(w241,vdd,OP9); //  
+ pmos #(56) pmos_AN42_4T152_8T152_16268_1B269_AL269(w241,vdd,w242); //  
+ nmos #(56) nmos_AN43_4T153_8T153_16269_1B270_AL270(w241,w243,OP9); //  
+ nmos #(14) nmos_AN44_4T154_8T154_16270_1B271_AL271(w243,vss,w242); //  
+ pmos #(1) pmos_AN45_4T155_8T155_16271_1B272_AL272(w246,w244,w245); //  
+ nmos #(1) nmos_AN46_4T156_8T156_16272_1B273_AL273(w248,w247,w245); //  
+ nmos #(42) nmos_AN47_4T157_8T157_16273_1B274_AL274(w217,vss,w241); //  
+ pmos #(42) pmos_AN48_4T158_8T158_16274_1B275_AL275(w217,vdd,w241); //  
+ pmos #(56) pmos_AN49_4T159_8T159_16275_1B276_AL276(w249,vdd,w242); //  
+ pmos #(56) pmos_AN50_4T160_8T160_16276_1B277_AL277(w249,vdd,w250); //  
+ nmos #(56) nmos_AN51_4T161_8T161_16277_1B278_AL278(w249,w251,w242); //  
+ nmos #(14) nmos_AN52_4T162_8T162_16278_1B279_AL279(w251,vss,w250); //  
+ pmos #(1) pmos_AN53_4T163_8T163_16279_1B280_AL280(w254,w252,w253); //  
+ nmos #(1) nmos_AN54_4T164_8T164_16280_1B281_AL281(w256,w255,w253); //  
+ nmos #(42) nmos_AN55_4T165_8T165_16281_1B282_AL282(w208,vss,w249); //  
+ pmos #(42) pmos_AN56_4T166_8T166_16282_1B283_AL283(w208,vdd,w249); //  
+ pmos #(56) pmos_AN57_4T167_8T167_16283_1B284_AL284(w257,vdd,OP8); //  
+ pmos #(56) pmos_AN58_4T168_8T168_16284_1B285_AL285(w257,vdd,w250); //  
+ nmos #(56) nmos_AN59_4T169_8T169_16285_1B286_AL286(w257,w258,OP8); //  
+ nmos #(14) nmos_AN60_4T170_8T170_16286_1B287_AL287(w258,vss,w250); //  
+ pmos #(1) pmos_AN61_4T171_8T171_16287_1B288_AL288(w261,w259,w260); //  
+ nmos #(1) nmos_AN62_4T172_8T172_16288_1B289_AL289(w263,w262,w260); //  
+ nmos #(42) nmos_AN63_4T173_8T173_16289_1B290_AL290(w198,vss,w257); //  
+ pmos #(42) pmos_AN64_4T174_8T174_16290_1B291_AL291(w198,vdd,w257); //  
+ pmos #(56) pmos_OR65_4T175_8T175_16291_1B292_AL292(w265,w264,w215); //  
+ pmos #(14) pmos_OR66_4T176_8T176_16292_1B293_AL293(w264,vdd,w205); //  
+ nmos #(56) nmos_OR67_4T177_8T177_16293_1B294_AL294(w265,vss,w205); //  
+ nmos #(56) nmos_OR68_4T178_8T178_16294_1B295_AL295(w265,vss,w215); //  
+ nmos #(42) nmos_OR69_4T179_8T179_16295_1B296_AL296(w266,vss,w265); //  
+ pmos #(42) pmos_OR70_4T180_8T180_16296_1B297_AL297(w266,vdd,w265); //  
+ pmos #(56) pmos_OR71_4T181_8T181_16297_1B298_AL298(w268,w267,w224); //  
+ pmos #(14) pmos_OR72_4T182_8T182_16298_1B299_AL299(w267,vdd,w233); //  
+ nmos #(56) nmos_OR73_4T183_8T183_16299_1B300_AL300(w268,vss,w233); //  
+ nmos #(56) nmos_OR74_4T184_8T184_16300_1B301_AL301(w268,vss,w224); //  
+ nmos #(42) nmos_OR75_4T185_8T185_16301_1B302_AL302(w269,vss,w268); //  
+ pmos #(42) pmos_OR76_4T186_8T186_16302_1B303_AL303(w269,vdd,w268); //  
+ pmos #(56) pmos_OR77_4T187_8T187_16303_1B304_AL304(w271,w270,w266); //  
+ pmos #(14) pmos_OR78_4T188_8T188_16304_1B305_AL305(w270,vdd,w269); //  
+ nmos #(56) nmos_OR79_4T189_8T189_16305_1B306_AL306(w271,vss,w269); //  
+ nmos #(56) nmos_OR80_4T190_8T190_16306_1B307_AL307(w271,vss,w266); //  
+ nmos #(42) nmos_OR81_4T191_8T191_16307_1B308_AL308(w99,vss,w271); //  
+ pmos #(42) pmos_OR82_4T192_8T192_16308_1B309_AL309(w99,vdd,w271); //  
+ pmos #(70) pmos_NO83_4T193_8T193_16309_1B310_AL310(w250,vdd,OP9); //  
+ nmos #(70) nmos_NO84_4T194_8T194_16310_1B311_AL311(w250,vss,OP9); //  
+ pmos #(70) pmos_NO85_4T195_8T195_16311_1B312_AL312(w242,vdd,OP8); //  
+ nmos #(70) nmos_NO86_4T196_8T196_16312_1B313_AL313(w242,vss,OP8); //  
+ pmos #(42) pmos_NO1_2T1_8T197_16313_1B314_AL314(w272,vdd,OP10); //  
+ nmos #(42) nmos_NO2_2T2_8T198_16314_1B315_AL315(w272,vss,OP10); //  
+ pmos #(56) pmos_AN3_2T3_8T199_16315_1B316_AL316(w274,vdd,w273); //  
+ pmos #(56) pmos_AN4_2T4_8T200_16316_1B317_AL317(w274,vdd,w272); //  
+ nmos #(56) nmos_AN5_2T5_8T201_16317_1B318_AL318(w274,w275,w273); //  
+ nmos #(14) nmos_AN6_2T6_8T202_16318_1B319_AL319(w275,vss,w272); //  
+ pmos #(1) pmos_AN7_2T7_8T203_16319_1B320_AL320(w278,w276,w277); //  
+ nmos #(1) nmos_AN8_2T8_8T204_16320_1B321_AL321(w280,w279,w277); //  
+ nmos #(42) nmos_AN9_2T9_8T205_16321_1B322_AL322(w281,vss,w274); //  
+ pmos #(42) pmos_AN10_2T10_8T206_16322_1B323_AL323(w281,vdd,w274); //  
+ pmos #(56) pmos_AN11_2T11_8T207_16323_1B324_AL324(w283,vdd,w282); //  
+ pmos #(56) pmos_AN12_2T12_8T208_16324_1B325_AL325(w283,vdd,OP10); //  
+ nmos #(56) nmos_AN13_2T13_8T209_16325_1B326_AL326(w283,w284,w282); //  
+ nmos #(14) nmos_AN14_2T14_8T210_16326_1B327_AL327(w284,vss,OP10); //  
+ pmos #(1) pmos_AN15_2T15_8T211_16327_1B328_AL328(w287,w285,w286); //  
+ nmos #(1) nmos_AN16_2T16_8T212_16328_1B329_AL329(w289,w288,w286); //  
+ nmos #(42) nmos_AN17_2T17_8T213_16329_1B330_AL330(w290,vss,w283); //  
+ pmos #(42) pmos_AN18_2T18_8T214_16330_1B331_AL331(w290,vdd,w283); //  
+ pmos #(56) pmos_OR19_2T19_8T215_16331_1B332_AL332(w292,w291,w290); //  
+ pmos #(14) pmos_OR20_2T20_8T216_16332_1B333_AL333(w291,vdd,w281); //  
+ nmos #(56) nmos_OR21_2T21_8T217_16333_1B334_AL334(w292,vss,w281); //  
+ nmos #(56) nmos_OR22_2T22_8T218_16334_1B335_AL335(w292,vss,w290); //  
+ nmos #(20) nmos_OR23_2T23_8T219_16335_1B336_AL336(w293,vss,w292); //  
+ pmos #(20) pmos_OR24_2T24_8T220_16336_1B337_AL337(w293,vdd,w292); //  
+ pmos #(56) pmos_AN1_4T25_8T221_16337_1B338_AL338(w294,vdd,w25); //  
+ pmos #(56) pmos_AN2_4T26_8T222_16338_1B339_AL339(w294,vdd,w295); //  
+ nmos #(56) nmos_AN3_4T27_8T223_16339_1B340_AL340(w294,w296,w25); //  
+ nmos #(14) nmos_AN4_4T28_8T224_16340_1B341_AL341(w296,vss,w295); //  
+ pmos #(1) pmos_AN5_4T29_8T225_16341_1B342_AL342(w299,w297,w298); //  
+ nmos #(1) nmos_AN6_4T30_8T226_16342_1B343_AL343(w301,w300,w298); //  
+ nmos #(42) nmos_AN7_4T31_8T227_16343_1B344_AL344(w302,vss,w294); //  
+ pmos #(42) pmos_AN8_4T32_8T228_16344_1B345_AL345(w302,vdd,w294); //  
+ pmos #(56) pmos_AN9_4T33_8T229_16345_1B346_AL346(w303,vdd,w19); //  
+ pmos #(56) pmos_AN10_4T34_8T230_16346_1B347_AL347(w303,vdd,w304); //  
+ nmos #(56) nmos_AN11_4T35_8T231_16347_1B348_AL348(w303,w305,w19); //  
+ nmos #(14) nmos_AN12_4T36_8T232_16348_1B349_AL349(w305,vss,w304); //  
+ pmos #(1) pmos_AN13_4T37_8T233_16349_1B350_AL350(w308,w306,w307); //  
+ nmos #(1) nmos_AN14_4T38_8T234_16350_1B351_AL351(w310,w309,w307); //  
+ nmos #(42) nmos_AN15_4T39_8T235_16351_1B352_AL352(w311,vss,w303); //  
+ pmos #(42) pmos_AN16_4T40_8T236_16352_1B353_AL353(w311,vdd,w303); //  
+ pmos #(56) pmos_AN17_4T41_8T237_16353_1B354_AL354(w313,vdd,w312); //  
+ pmos #(56) pmos_AN18_4T42_8T238_16354_1B355_AL355(w313,vdd,w314); //  
+ nmos #(56) nmos_AN19_4T43_8T239_16355_1B356_AL356(w313,w315,w312); //  
+ nmos #(14) nmos_AN20_4T44_8T240_16356_1B357_AL357(w315,vss,w314); //  
+ pmos #(1) pmos_AN21_4T45_8T241_16357_1B358_AL358(w318,w316,w317); //  
+ nmos #(1) nmos_AN22_4T46_8T242_16358_1B359_AL359(w320,w319,w317); //  
+ nmos #(42) nmos_AN23_4T47_8T243_16359_1B360_AL360(w321,vss,w313); //  
+ pmos #(42) pmos_AN24_4T48_8T244_16360_1B361_AL361(w321,vdd,w313); //  
+ pmos #(56) pmos_AN25_4T49_8T245_16361_1B362_AL362(w323,vdd,w322); //  
+ pmos #(56) pmos_AN26_4T50_8T246_16362_1B363_AL363(w323,vdd,w324); //  
+ nmos #(56) nmos_AN27_4T51_8T247_16363_1B364_AL364(w323,w325,w322); //  
+ nmos #(14) nmos_AN28_4T52_8T248_16364_1B365_AL365(w325,vss,w324); //  
+ pmos #(1) pmos_AN29_4T53_8T249_16365_1B366_AL366(w328,w326,w327); //  
+ nmos #(1) nmos_AN30_4T54_8T250_16366_1B367_AL367(w330,w329,w327); //  
+ nmos #(42) nmos_AN31_4T55_8T251_16367_1B368_AL368(w331,vss,w323); //  
+ pmos #(42) pmos_AN32_4T56_8T252_16368_1B369_AL369(w331,vdd,w323); //  
+ pmos #(56) pmos_AN33_4T57_8T253_16369_1B370_AL370(w332,vdd,OP9); //  
+ pmos #(56) pmos_AN34_4T58_8T254_16370_1B371_AL371(w332,vdd,OP8); //  
+ nmos #(56) nmos_AN35_4T59_8T255_16371_1B372_AL372(w332,w333,OP9); //  
+ nmos #(14) nmos_AN36_4T60_8T256_16372_1B373_AL373(w333,vss,OP8); //  
+ pmos #(1) pmos_AN37_4T61_8T257_16373_1B374_AL374(w336,w334,w335); //  
+ nmos #(1) nmos_AN38_4T62_8T258_16374_1B375_AL375(w338,w337,w335); //  
+ nmos #(42) nmos_AN39_4T63_8T259_16375_1B376_AL376(w324,vss,w332); //  
+ pmos #(42) pmos_AN40_4T64_8T260_16376_1B377_AL377(w324,vdd,w332); //  
+ pmos #(56) pmos_AN41_4T65_8T261_16377_1B378_AL378(w339,vdd,OP9); //  
+ pmos #(56) pmos_AN42_4T66_8T262_16378_1B379_AL379(w339,vdd,w340); //  
+ nmos #(56) nmos_AN43_4T67_8T263_16379_1B380_AL380(w339,w341,OP9); //  
+ nmos #(14) nmos_AN44_4T68_8T264_16380_1B381_AL381(w341,vss,w340); //  
+ pmos #(1) pmos_AN45_4T69_8T265_16381_1B382_AL382(w344,w342,w343); //  
+ nmos #(1) nmos_AN46_4T70_8T266_16382_1B383_AL383(w346,w345,w343); //  
+ nmos #(42) nmos_AN47_4T71_8T267_16383_1B384_AL384(w314,vss,w339); //  
+ pmos #(42) pmos_AN48_4T72_8T268_16384_1B385_AL385(w314,vdd,w339); //  
+ pmos #(56) pmos_AN49_4T73_8T269_16385_1B386_AL386(w347,vdd,w340); //  
+ pmos #(56) pmos_AN50_4T74_8T270_16386_1B387_AL387(w347,vdd,w348); //  
+ nmos #(56) nmos_AN51_4T75_8T271_16387_1B388_AL388(w347,w349,w340); //  
+ nmos #(14) nmos_AN52_4T76_8T272_16388_1B389_AL389(w349,vss,w348); //  
+ pmos #(1) pmos_AN53_4T77_8T273_16389_1B390_AL390(w352,w350,w351); //  
+ nmos #(1) nmos_AN54_4T78_8T274_16390_1B391_AL391(w354,w353,w351); //  
+ nmos #(42) nmos_AN55_4T79_8T275_16391_1B392_AL392(w304,vss,w347); //  
+ pmos #(42) pmos_AN56_4T80_8T276_16392_1B393_AL393(w304,vdd,w347); //  
+ pmos #(56) pmos_AN57_4T81_8T277_16393_1B394_AL394(w355,vdd,OP8); //  
+ pmos #(56) pmos_AN58_4T82_8T278_16394_1B395_AL395(w355,vdd,w348); //  
+ nmos #(56) nmos_AN59_4T83_8T279_16395_1B396_AL396(w355,w356,OP8); //  
+ nmos #(14) nmos_AN60_4T84_8T280_16396_1B397_AL397(w356,vss,w348); //  
+ pmos #(1) pmos_AN61_4T85_8T281_16397_1B398_AL398(w359,w357,w358); //  
+ nmos #(1) nmos_AN62_4T86_8T282_16398_1B399_AL399(w361,w360,w358); //  
+ nmos #(42) nmos_AN63_4T87_8T283_16399_1B400_AL400(w295,vss,w355); //  
+ pmos #(42) pmos_AN64_4T88_8T284_16400_1B401_AL401(w295,vdd,w355); //  
+ pmos #(56) pmos_OR65_4T89_8T285_16401_1B402_AL402(w363,w362,w311); //  
+ pmos #(14) pmos_OR66_4T90_8T286_16402_1B403_AL403(w362,vdd,w302); //  
+ nmos #(56) nmos_OR67_4T91_8T287_16403_1B404_AL404(w363,vss,w302); //  
+ nmos #(56) nmos_OR68_4T92_8T288_16404_1B405_AL405(w363,vss,w311); //  
+ nmos #(42) nmos_OR69_4T93_8T289_16405_1B406_AL406(w364,vss,w363); //  
+ pmos #(42) pmos_OR70_4T94_8T290_16406_1B407_AL407(w364,vdd,w363); //  
+ pmos #(56) pmos_OR71_4T95_8T291_16407_1B408_AL408(w366,w365,w321); //  
+ pmos #(14) pmos_OR72_4T96_8T292_16408_1B409_AL409(w365,vdd,w331); //  
+ nmos #(56) nmos_OR73_4T97_8T293_16409_1B410_AL410(w366,vss,w331); //  
+ nmos #(56) nmos_OR74_4T98_8T294_16410_1B411_AL411(w366,vss,w321); //  
+ nmos #(42) nmos_OR75_4T99_8T295_16411_1B412_AL412(w367,vss,w366); //  
+ pmos #(42) pmos_OR76_4T100_8T296_16412_1B413_AL413(w367,vdd,w366); //  
+ pmos #(56) pmos_OR77_4T101_8T297_16413_1B414_AL414(w369,w368,w364); //  
+ pmos #(14) pmos_OR78_4T102_8T298_16414_1B415_AL415(w368,vdd,w367); //  
+ nmos #(56) nmos_OR79_4T103_8T299_16415_1B416_AL416(w369,vss,w367); //  
+ nmos #(56) nmos_OR80_4T104_8T300_16416_1B417_AL417(w369,vss,w364); //  
+ nmos #(42) nmos_OR81_4T105_8T301_16417_1B418_AL418(w282,vss,w369); //  
+ pmos #(42) pmos_OR82_4T106_8T302_16418_1B419_AL419(w282,vdd,w369); //  
+ pmos #(70) pmos_NO83_4T107_8T303_16419_1B420_AL420(w348,vdd,OP9); //  
+ nmos #(70) nmos_NO84_4T108_8T304_16420_1B421_AL421(w348,vss,OP9); //  
+ pmos #(70) pmos_NO85_4T109_8T305_16421_1B422_AL422(w340,vdd,OP8); //  
+ nmos #(70) nmos_NO86_4T110_8T306_16422_1B423_AL423(w340,vss,OP8); //  
+ pmos #(56) pmos_AN1_4T111_8T307_16423_1B424_AL424(w370,vdd,w55); //  
+ pmos #(56) pmos_AN2_4T112_8T308_16424_1B425_AL425(w370,vdd,w371); //  
+ nmos #(56) nmos_AN3_4T113_8T309_16425_1B426_AL426(w370,w372,w55); //  
+ nmos #(14) nmos_AN4_4T114_8T310_16426_1B427_AL427(w372,vss,w371); //  
+ pmos #(1) pmos_AN5_4T115_8T311_16427_1B428_AL428(w375,w373,w374); //  
+ nmos #(1) nmos_AN6_4T116_8T312_16428_1B429_AL429(w377,w376,w374); //  
+ nmos #(21) nmos_AN7_4T117_8T313_16429_1B430_AL430(w378,vss,w370); //  
+ pmos #(21) pmos_AN8_4T118_8T314_16430_1B431_AL431(w378,vdd,w370); //  
+ pmos #(56) pmos_AN9_4T119_8T315_16431_1B432_AL432(w380,vdd,w379); //  
+ pmos #(56) pmos_AN10_4T120_8T316_16432_1B433_AL433(w380,vdd,w381); //  
+ nmos #(56) nmos_AN11_4T121_8T317_16433_1B434_AL434(w380,w382,w379); //  
+ nmos #(14) nmos_AN12_4T122_8T318_16434_1B435_AL435(w382,vss,w381); //  
+ pmos #(1) pmos_AN13_4T123_8T319_16435_1B436_AL436(w385,w383,w384); //  
+ nmos #(1) nmos_AN14_4T124_8T320_16436_1B437_AL437(w387,w386,w384); //  
+ nmos #(21) nmos_AN15_4T125_8T321_16437_1B438_AL438(w388,vss,w380); //  
+ pmos #(21) pmos_AN16_4T126_8T322_16438_1B439_AL439(w388,vdd,w380); //  
+ pmos #(35) pmos_AN17_4T127_8T323_16439_1B440_AL440(w390,vdd,w389); //  
+ pmos #(35) pmos_AN18_4T128_8T324_16440_1B441_AL441(w390,vdd); //  
+	
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 OP0=~OP0;
+#2000 OP1=~OP1;
+#4000 OP2=~OP2;
+#8000 OP3=~OP3;
+#16000 OP9=~OP9;
+#32000 OP8=~OP8;
+#64000 OP7=~OP7;
+#128000 OP6=~OP6;
+#256000 OP5=~OP5;
+#512000 OP4=~OP4;
+#1024000 OP11=~OP11;
+#2048000 OP10=~OP10;
+
+// Simulation parameters
+// OP0 CLK 10 10
+// OP1 CLK 20 20
+// OP2 CLK 40 40
+// OP3 CLK 80 80
+// OP9 CLK 160 160
+// OP8 CLK 320 320
+// OP7 CLK 640 640
+// OP6 CLK 1280 1280
+// OP5 CLK 2560 2560
+// OP4 CLK 5120 5120
+// OP11 CLK 10240 10240
+// OP10 CLK 20480 20480

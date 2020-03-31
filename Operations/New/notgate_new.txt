@@ -1,0 +1,17 @@
+// DSCH 2.7a
+// 29-Mar-20 3:35:18 AM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\Operations\New\notgate_new.sch
+
+module notgate_new( A,~A);
+ input A;
+ output ~A;
+ pmos #(17) pmos(~A,vdd,A); // 2.0u 0.12u
+ nmos #(17) nmos(~A,vss,A); // 1.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 A=~A;
+
+// Simulation parameters
+// A CLK 10 10

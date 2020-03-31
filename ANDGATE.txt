@@ -1,0 +1,25 @@
+// DSCH 2.7a
+// 25-Mar-20 8:58:58 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\ANDGATE.sch
+
+module ANDGATE( B,A,out1);
+ input B,A;
+ output out1;
+ pmos #(31) pmos(w2,vdd,A); // 2.0u 0.12u
+ pmos #(31) pmos(w2,vdd,B); // 2.0u 0.12u
+ nmos #(31) nmos(w2,w4,A); // 1.0u 0.12u
+ nmos #(10) nmos(w4,vss,B); // 1.0u 0.12u
+ pmos #(3) pmos(w7,w5,w6); // 2.0u 0.12u
+ nmos #(3) nmos(w9,w8,w6); // 1.0u 0.12u
+ nmos #(17) nmos(out1,vss,w2); // 1.0u 0.12u
+ pmos #(17) pmos(out1,vdd,w2); // 2.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#2000 B=~B;
+#1000 A=~A;
+
+// Simulation parameters
+// B CLK 20.000 20.000
+// A CLK 10.000 10.000

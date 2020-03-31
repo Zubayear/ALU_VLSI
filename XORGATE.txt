@@ -1,0 +1,27 @@
+// DSCH 2.7a
+// 25-Mar-20 9:24:07 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\XORGATE.sch
+
+module XORGATE( B,A,Output);
+ input B,A;
+ output Output;
+ pmos #(24) pmos(w2,vdd,A); // 2.0u 0.12u
+ nmos #(24) nmos(w2,vss,A); // 1.0u 0.12u
+ pmos #(38) pmos(w4,B,A); // 2.0u 0.12u
+ nmos #(38) nmos(w4,B,w2); // 1.0u 0.12u
+ pmos #(38) pmos(w4,A,B); // 2.0u 0.12u
+ nmos #(38) nmos(w4,w2,B); // 1.0u 0.12u
+ pmos #(17) pmos(Output,vdd,w5); // 2.0u 0.12u
+ nmos #(17) nmos(Output,vss,w5); // 1.0u 0.12u
+ nmos #(24) nmos(w5,vss,w4); // 1.0u 0.12u
+ pmos #(24) pmos(w5,vdd,w4); // 2.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#4000 B=~B;
+#2000 A=~A;
+
+// Simulation parameters
+// B CLK 40.000 40.000
+// A CLK 20.000 20.000

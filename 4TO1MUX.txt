@@ -1,0 +1,119 @@
+// DSCH 2.7a
+// 26-Mar-20 8:13:03 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\4TO1MUX.sch
+
+module 4TO1MUX( I0,I3,I2,I1,S0,S1,Y);
+ input I0,I3,I2,I1,S0,S1;
+ output Y;
+ wire w20,w21,w22,w23,w24,w25,w26,w27;
+ wire w28,w29,w30,w31,w32,w33,w34,w35;
+ wire w36,w37,w38,w39,w40,w41,w42,w43;
+ wire w44,w45,w46,w47,w48,w49,w50,w51;
+ wire w52,w53,w54,w55,w56,w57,w58,w59;
+ wire w60,w61,w62,w63,w64,w65,w66,w67;
+ wire w68,w69,w70,w71,w72,w73,w74,w75;
+ wire w76,w77,w78,w79,w80,w81;
+ pmos #(44) pmos_AN1(w20,vdd,I1); //  
+ pmos #(44) pmos_AN2(w20,vdd,w1); //  
+ nmos #(44) nmos_AN3(w20,w21,I1); //  
+ nmos #(12) nmos_AN4(w21,vss,w1); //  
+ pmos #(1) pmos_AN5(w24,w22,w23); //  
+ nmos #(1) nmos_AN6(w26,w25,w23); //  
+ nmos #(30) nmos_AN7(w3,vss,w20); //  
+ pmos #(30) pmos_AN8(w3,vdd,w20); //  
+ pmos #(44) pmos_AN9(w27,vdd,I0); //  
+ pmos #(44) pmos_AN10(w27,vdd,w4); //  
+ nmos #(44) nmos_AN11(w27,w28,I0); //  
+ nmos #(12) nmos_AN12(w28,vss,w4); //  
+ pmos #(1) pmos_AN13(w31,w29,w30); //  
+ nmos #(1) nmos_AN14(w33,w32,w30); //  
+ nmos #(30) nmos_AN15(w6,vss,w27); //  
+ pmos #(30) pmos_AN16(w6,vdd,w27); //  
+ pmos #(44) pmos_AN17(w34,vdd,I2); //  
+ pmos #(44) pmos_AN18(w34,vdd,w7); //  
+ nmos #(44) nmos_AN19(w34,w35,I2); //  
+ nmos #(12) nmos_AN20(w35,vss,w7); //  
+ pmos #(1) pmos_AN21(w38,w36,w37); //  
+ nmos #(1) nmos_AN22(w40,w39,w37); //  
+ nmos #(30) nmos_AN23(w9,vss,w34); //  
+ pmos #(30) pmos_AN24(w9,vdd,w34); //  
+ pmos #(44) pmos_AN25(w41,vdd,I3); //  
+ pmos #(44) pmos_AN26(w41,vdd,w10); //  
+ nmos #(44) nmos_AN27(w41,w42,I3); //  
+ nmos #(12) nmos_AN28(w42,vss,w10); //  
+ pmos #(1) pmos_AN29(w45,w43,w44); //  
+ nmos #(1) nmos_AN30(w47,w46,w44); //  
+ nmos #(30) nmos_AN31(w12,vss,w41); //  
+ pmos #(30) pmos_AN32(w12,vdd,w41); //  
+ pmos #(44) pmos_AN33(w48,vdd,S1); //  
+ pmos #(44) pmos_AN34(w48,vdd,S0); //  
+ nmos #(44) nmos_AN35(w48,w49,S1); //  
+ nmos #(12) nmos_AN36(w49,vss,S0); //  
+ pmos #(1) pmos_AN37(w52,w50,w51); //  
+ nmos #(1) nmos_AN38(w54,w53,w51); //  
+ nmos #(30) nmos_AN39(w10,vss,w48); //  
+ pmos #(30) pmos_AN40(w10,vdd,w48); //  
+ pmos #(44) pmos_AN41(w55,vdd,S1); //  
+ pmos #(44) pmos_AN42(w55,vdd,w15); //  
+ nmos #(44) nmos_AN43(w55,w56,S1); //  
+ nmos #(12) nmos_AN44(w56,vss,w15); //  
+ pmos #(1) pmos_AN45(w59,w57,w58); //  
+ nmos #(1) nmos_AN46(w61,w60,w58); //  
+ nmos #(30) nmos_AN47(w7,vss,w55); //  
+ pmos #(30) pmos_AN48(w7,vdd,w55); //  
+ pmos #(44) pmos_AN49(w62,vdd,w15); //  
+ pmos #(44) pmos_AN50(w62,vdd,w16); //  
+ nmos #(44) nmos_AN51(w62,w63,w15); //  
+ nmos #(12) nmos_AN52(w63,vss,w16); //  
+ pmos #(1) pmos_AN53(w66,w64,w65); //  
+ nmos #(1) nmos_AN54(w68,w67,w65); //  
+ nmos #(30) nmos_AN55(w4,vss,w62); //  
+ pmos #(30) pmos_AN56(w4,vdd,w62); //  
+ pmos #(44) pmos_AN57(w69,vdd,S0); //  
+ pmos #(44) pmos_AN58(w69,vdd,w16); //  
+ nmos #(44) nmos_AN59(w69,w70,S0); //  
+ nmos #(12) nmos_AN60(w70,vss,w16); //  
+ pmos #(1) pmos_AN61(w73,w71,w72); //  
+ nmos #(1) nmos_AN62(w75,w74,w72); //  
+ nmos #(30) nmos_AN63(w1,vss,w69); //  
+ pmos #(30) pmos_AN64(w1,vdd,w69); //  
+ pmos #(44) pmos_OR65(w77,w76,w6); //  
+ pmos #(12) pmos_OR66(w76,vdd,w3); //  
+ nmos #(44) nmos_OR67(w77,vss,w3); //  
+ nmos #(44) nmos_OR68(w77,vss,w6); //  
+ nmos #(30) nmos_OR69(w17,vss,w77); //  
+ pmos #(30) pmos_OR70(w17,vdd,w77); //  
+ pmos #(44) pmos_OR71(w79,w78,w9); //  
+ pmos #(12) pmos_OR72(w78,vdd,w12); //  
+ nmos #(44) nmos_OR73(w79,vss,w12); //  
+ nmos #(44) nmos_OR74(w79,vss,w9); //  
+ nmos #(30) nmos_OR75(w18,vss,w79); //  
+ pmos #(30) pmos_OR76(w18,vdd,w79); //  
+ pmos #(44) pmos_OR77(w81,w80,w17); //  
+ pmos #(12) pmos_OR78(w80,vdd,w18); //  
+ nmos #(44) nmos_OR79(w81,vss,w18); //  
+ nmos #(44) nmos_OR80(w81,vss,w17); //  
+ nmos #(23) nmos_OR81(Y,vss,w81); //  
+ pmos #(23) pmos_OR82(Y,vdd,w81); //  
+ pmos #(44) pmos_NO83(w16,vdd,S1); //  
+ nmos #(44) nmos_NO84(w16,vss,S1); //  
+ pmos #(44) pmos_NO85(w15,vdd,S0); //  
+ nmos #(44) nmos_NO86(w15,vss,S0); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 I0=~I0;
+#2000 I3=~I3;
+#4000 I2=~I2;
+#8000 I1=~I1;
+#16000 S0=~S0;
+#32000 S1=~S1;
+
+// Simulation parameters
+// I0 CLK 10 10
+// I3 CLK 20 20
+// I2 CLK 40 40
+// I1 CLK 80 80
+// S0 CLK 160 160
+// S1 CLK 320 320

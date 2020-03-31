@@ -1,0 +1,110 @@
+DSCH 2.7a
+VERSION 29-Mar-20 1:47:34 AM
+BB(0,0,40,50)
+SYM  #MULL
+BB(0,0,40,50)
+TITLE 10 -2  #MULL
+MODEL 6000
+PROP                                                                                                                                                                                                           
+REC(5,5,30,40,r)
+VIS 5
+PIN(0,30,0.000,0.000)B0
+PIN(0,40,0.000,0.000)B1
+PIN(0,10,0.000,0.000)A0
+PIN(0,20,0.000,0.000)A1
+PIN(40,40,2.000,0.140)out4
+PIN(40,30,2.000,0.140)out3
+PIN(40,20,2.000,0.140)out2
+PIN(40,10,2.000,0.140)out1
+LIG(0,30,5,30)
+LIG(0,40,5,40)
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,45)
+LIG(5,5,35,5)
+LIG(35,5,35,45)
+LIG(35,45,5,45)
+VLG  module MULL( B0,B1,A0,A1,out4,out3,out2,out1);
+VLG   input B0,B1,A0,A1;
+VLG   output out4,out3,out2,out1;
+VLG   wire w13,w14,w15,w16,w17,w18,w19,w20;
+VLG   wire w21,w22,w23,w24,w25,w26,w27,w28;
+VLG   wire w29,w30,w31,w32,w33,w34,w35,w36;
+VLG   wire w37,w38,w39,w40,w41,w42,w43,w44;
+VLG   wire w45,w46,w47,w48,w49,w50,w51,w52;
+VLG   wire w53,w54,w55,w56,w57,w58,w59,w60;
+VLG   pmos #(38) pmos_XO1_HA1(w13,vdd,w1); //  
+VLG   nmos #(38) nmos_XO2_HA2(w13,vss,w1); //  
+VLG   pmos #(62) pmos_XO3_HA3(w14,w2,w1); //  
+VLG   nmos #(62) nmos_XO4_HA4(w14,w2,w13); //  
+VLG   pmos #(62) pmos_XO5_HA5(w14,w1,w2); //  
+VLG   nmos #(62) nmos_XO6_HA6(w14,w13,w2); //  
+VLG   pmos #(26) pmos_XO7_HA7(out3,vdd,w15); //  
+VLG   nmos #(26) nmos_XO8_HA8(out3,vss,w15); //  
+VLG   nmos #(38) nmos_XO9_HA9(w15,vss,w14); //  
+VLG   pmos #(38) pmos_XO10_HA10(w15,vdd,w14); //  
+VLG   pmos #(50) pmos_AN11_HA11(w16,vdd,w1); //  
+VLG   pmos #(50) pmos_AN12_HA12(w16,vdd,w2); //  
+VLG   nmos #(50) nmos_AN13_HA13(w16,w17,w1); //  
+VLG   nmos #(13) nmos_AN14_HA14(w17,vss,w2); //  
+VLG   pmos #(1) pmos_AN15_HA15(w20,w18,w19); //  
+VLG   nmos #(1) nmos_AN16_HA16(w22,w21,w19); //  
+VLG   nmos #(26) nmos_AN17_HA17(out4,vss,w16); //  
+VLG   pmos #(26) pmos_AN18_HA18(out4,vdd,w16); //  
+VLG   pmos #(44) pmos_AN19(w23,vdd,B0); //  
+VLG   pmos #(44) pmos_AN20(w23,vdd,A1); //  
+VLG   nmos #(44) nmos_AN21(w23,w24,B0); //  
+VLG   nmos #(12) nmos_AN22(w24,vss,A1); //  
+VLG   pmos #(1) pmos_AN23(w27,w25,w26); //  
+VLG   nmos #(1) nmos_AN24(w29,w28,w26); //  
+VLG   nmos #(58) nmos_AN25(w7,vss,w23); //  
+VLG   pmos #(58) pmos_AN26(w7,vdd,w23); //  
+VLG   pmos #(44) pmos_AN27(w30,vdd,A0); //  
+VLG   pmos #(44) pmos_AN28(w30,vdd,B1); //  
+VLG   nmos #(44) nmos_AN29(w30,w31,A0); //  
+VLG   nmos #(12) nmos_AN30(w31,vss,B1); //  
+VLG   pmos #(1) pmos_AN31(w34,w32,w33); //  
+VLG   nmos #(1) nmos_AN32(w36,w35,w33); //  
+VLG   nmos #(58) nmos_AN33(w10,vss,w30); //  
+VLG   pmos #(58) pmos_AN34(w10,vdd,w30); //  
+VLG   pmos #(44) pmos_AN35(w37,vdd,A0); //  
+VLG   pmos #(44) pmos_AN36(w37,vdd,B0); //  
+VLG   nmos #(44) nmos_AN37(w37,w38,A0); //  
+VLG   nmos #(12) nmos_AN38(w38,vss,B0); //  
+VLG   pmos #(1) pmos_AN39(w41,w39,w40); //  
+VLG   nmos #(1) nmos_AN40(w43,w42,w40); //  
+VLG   nmos #(23) nmos_AN41(out1,vss,w37); //  
+VLG   pmos #(23) pmos_AN42(out1,vdd,w37); //  
+VLG   pmos #(44) pmos_AN43(w44,vdd,B1); //  
+VLG   pmos #(44) pmos_AN44(w44,vdd,A1); //  
+VLG   nmos #(44) nmos_AN45(w44,w45,B1); //  
+VLG   nmos #(12) nmos_AN46(w45,vss,A1); //  
+VLG   pmos #(1) pmos_AN47(w48,w46,w47); //  
+VLG   nmos #(1) nmos_AN48(w50,w49,w47); //  
+VLG   nmos #(58) nmos_AN49(w2,vss,w44); //  
+VLG   pmos #(58) pmos_AN50(w2,vdd,w44); //  
+VLG   pmos #(38) pmos_XO1_HA51(w51,vdd,w10); //  
+VLG   nmos #(38) nmos_XO2_HA52(w51,vss,w10); //  
+VLG   pmos #(62) pmos_XO3_HA53(w52,w7,w10); //  
+VLG   nmos #(62) nmos_XO4_HA54(w52,w7,w51); //  
+VLG   pmos #(62) pmos_XO5_HA55(w52,w10,w7); //  
+VLG   nmos #(62) nmos_XO6_HA56(w52,w51,w7); //  
+VLG   pmos #(26) pmos_XO7_HA57(out2,vdd,w53); //  
+VLG   nmos #(26) nmos_XO8_HA58(out2,vss,w53); //  
+VLG   nmos #(38) nmos_XO9_HA59(w53,vss,w52); //  
+VLG   pmos #(38) pmos_XO10_HA60(w53,vdd,w52); //  
+VLG   pmos #(50) pmos_AN11_HA61(w54,vdd,w10); //  
+VLG   pmos #(50) pmos_AN12_HA62(w54,vdd,w7); //  
+VLG   nmos #(50) nmos_AN13_HA63(w54,w55,w10); //  
+VLG   nmos #(13) nmos_AN14_HA64(w55,vss,w7); //  
+VLG   pmos #(1) pmos_AN15_HA65(w58,w56,w57); //  
+VLG   nmos #(1) nmos_AN16_HA66(w60,w59,w57); //  
+VLG   nmos #(61) nmos_AN17_HA67(w1,vss,w54); //  
+VLG   pmos #(61) pmos_AN18_HA68(w1,vdd,w54); //  
+VLG  endmodule
+FSYM
+FFIG C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\Operations\MULL.sym

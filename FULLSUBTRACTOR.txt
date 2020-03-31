@@ -1,0 +1,68 @@
+// DSCH 2.7a
+// 26-Mar-20 12:18:49 AM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\FULLSUBTRACTOR.sch
+
+module FULLSUBTRACTOR( Bin,A,B,B0,D);
+ input Bin,A,B;
+ output B0,D;
+ wire w11,w12,w13,w14,w15,w16,w17,w18;
+ wire w19,w20,w21,w22,w23,w24,w25,w26;
+ wire w27,w28,w29,w30,w31,w32;
+ pmos #(33) pmos_XO1(w11,vdd,w2); //  
+ nmos #(33) nmos_XO2(w11,vss,w2); //  
+ pmos #(54) pmos_XO3(w12,Bin,w2); //  
+ nmos #(54) nmos_XO4(w12,Bin,w11); //  
+ pmos #(54) pmos_XO5(w12,w2,Bin); //  
+ nmos #(54) nmos_XO6(w12,w11,Bin); //  
+ pmos #(23) pmos_XO7(D,vdd,w13); //  
+ nmos #(23) nmos_XO8(D,vss,w13); //  
+ nmos #(33) nmos_XO9(w13,vss,w12); //  
+ pmos #(33) pmos_XO10(w13,vdd,w12); //  
+ pmos #(30) pmos_NO11(w5,vdd,A); //  
+ nmos #(30) nmos_NO12(w5,vss,A); //  
+ pmos #(44) pmos_OR13(w15,w14,w6); //  
+ pmos #(12) pmos_OR14(w14,vdd,w7); //  
+ nmos #(44) nmos_OR15(w15,vss,w7); //  
+ nmos #(44) nmos_OR16(w15,vss,w6); //  
+ nmos #(23) nmos_OR17(B0,vss,w15); //  
+ pmos #(23) pmos_OR18(B0,vdd,w15); //  
+ pmos #(33) pmos_XO19(w16,vdd,A); //  
+ nmos #(33) nmos_XO20(w16,vss,A); //  
+ pmos #(54) pmos_XO21(w17,B,A); //  
+ nmos #(54) nmos_XO22(w17,B,w16); //  
+ pmos #(54) pmos_XO23(w17,A,B); //  
+ nmos #(54) nmos_XO24(w17,w16,B); //  
+ pmos #(58) pmos_XO25(w2,vdd,w18); //  
+ nmos #(58) nmos_XO26(w2,vss,w18); //  
+ nmos #(33) nmos_XO27(w18,vss,w17); //  
+ pmos #(33) pmos_XO28(w18,vdd,w17); //  
+ pmos #(30) pmos_NO29(w10,vdd,w2); //  
+ nmos #(30) nmos_NO30(w10,vss,w2); //  
+ pmos #(44) pmos_AN31(w19,vdd,B); //  
+ pmos #(44) pmos_AN32(w19,vdd,w5); //  
+ nmos #(44) nmos_AN33(w19,w20,B); //  
+ nmos #(12) nmos_AN34(w20,vss,w5); //  
+ pmos #(1) pmos_AN35(w23,w21,w22); //  
+ nmos #(1) nmos_AN36(w25,w24,w22); //  
+ nmos #(30) nmos_AN37(w7,vss,w19); //  
+ pmos #(30) pmos_AN38(w7,vdd,w19); //  
+ pmos #(44) pmos_AN39(w26,vdd,Bin); //  
+ pmos #(44) pmos_AN40(w26,vdd,w10); //  
+ nmos #(44) nmos_AN41(w26,w27,Bin); //  
+ nmos #(12) nmos_AN42(w27,vss,w10); //  
+ pmos #(1) pmos_AN43(w30,w28,w29); //  
+ nmos #(1) nmos_AN44(w32,w31,w29); //  
+ nmos #(30) nmos_AN45(w6,vss,w26); //  
+ pmos #(30) pmos_AN46(w6,vdd,w26); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 Bin=~Bin;
+#2000 A=~A;
+#4000 B=~B;
+
+// Simulation parameters
+// Bin CLK 10.000 10.000
+// A CLK 20.000 20.000
+// B CLK 40.000 40.000

@@ -1,0 +1,17 @@
+// DSCH 2.7a
+// 26-Mar-20 6:32:30 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\NOTGATE.sch
+
+module NOTGATE( clk2,out1);
+ input clk2;
+ output out1;
+ pmos #(17) pmos(out1,vdd,clk2); // 2.0u 0.12u
+ nmos #(17) nmos(out1,vss,clk2); // 1.0u 0.12u
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#2000 clk2=~clk2;
+
+// Simulation parameters
+// clk2 CLK 20.00 20.00

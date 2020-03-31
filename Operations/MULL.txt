@@ -1,0 +1,95 @@
+// DSCH 2.7a
+// 26-Mar-20 6:12:04 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\MULL.sch
+
+module MULL( B0,B1,A0,A1,out4,out3,out2,out1);
+ input B0,B1,A0,A1;
+ output out4,out3,out2,out1;
+ wire w13,w14,w15,w16,w17,w18,w19,w20;
+ wire w21,w22,w23,w24,w25,w26,w27,w28;
+ wire w29,w30,w31,w32,w33,w34,w35,w36;
+ wire w37,w38,w39,w40,w41,w42,w43,w44;
+ wire w45,w46,w47,w48,w49,w50,w51,w52;
+ wire w53,w54,w55,w56,w57,w58,w59,w60;
+ pmos #(38) pmos_XO1_HA1(w13,vdd,w1); //  
+ nmos #(38) nmos_XO2_HA2(w13,vss,w1); //  
+ pmos #(62) pmos_XO3_HA3(w14,w2,w1); //  
+ nmos #(62) nmos_XO4_HA4(w14,w2,w13); //  
+ pmos #(62) pmos_XO5_HA5(w14,w1,w2); //  
+ nmos #(62) nmos_XO6_HA6(w14,w13,w2); //  
+ pmos #(26) pmos_XO7_HA7(out3,vdd,w15); //  
+ nmos #(26) nmos_XO8_HA8(out3,vss,w15); //  
+ nmos #(38) nmos_XO9_HA9(w15,vss,w14); //  
+ pmos #(38) pmos_XO10_HA10(w15,vdd,w14); //  
+ pmos #(50) pmos_AN11_HA11(w16,vdd,w1); //  
+ pmos #(50) pmos_AN12_HA12(w16,vdd,w2); //  
+ nmos #(50) nmos_AN13_HA13(w16,w17,w1); //  
+ nmos #(13) nmos_AN14_HA14(w17,vss,w2); //  
+ pmos #(1) pmos_AN15_HA15(w20,w18,w19); //  
+ nmos #(1) nmos_AN16_HA16(w22,w21,w19); //  
+ nmos #(26) nmos_AN17_HA17(out4,vss,w16); //  
+ pmos #(26) pmos_AN18_HA18(out4,vdd,w16); //  
+ pmos #(44) pmos_AN19(w23,vdd,B0); //  
+ pmos #(44) pmos_AN20(w23,vdd,A1); //  
+ nmos #(44) nmos_AN21(w23,w24,B0); //  
+ nmos #(12) nmos_AN22(w24,vss,A1); //  
+ pmos #(1) pmos_AN23(w27,w25,w26); //  
+ nmos #(1) nmos_AN24(w29,w28,w26); //  
+ nmos #(58) nmos_AN25(w7,vss,w23); //  
+ pmos #(58) pmos_AN26(w7,vdd,w23); //  
+ pmos #(44) pmos_AN27(w30,vdd,A0); //  
+ pmos #(44) pmos_AN28(w30,vdd,B1); //  
+ nmos #(44) nmos_AN29(w30,w31,A0); //  
+ nmos #(12) nmos_AN30(w31,vss,B1); //  
+ pmos #(1) pmos_AN31(w34,w32,w33); //  
+ nmos #(1) nmos_AN32(w36,w35,w33); //  
+ nmos #(58) nmos_AN33(w10,vss,w30); //  
+ pmos #(58) pmos_AN34(w10,vdd,w30); //  
+ pmos #(44) pmos_AN35(w37,vdd,A0); //  
+ pmos #(44) pmos_AN36(w37,vdd,B0); //  
+ nmos #(44) nmos_AN37(w37,w38,A0); //  
+ nmos #(12) nmos_AN38(w38,vss,B0); //  
+ pmos #(1) pmos_AN39(w41,w39,w40); //  
+ nmos #(1) nmos_AN40(w43,w42,w40); //  
+ nmos #(23) nmos_AN41(out1,vss,w37); //  
+ pmos #(23) pmos_AN42(out1,vdd,w37); //  
+ pmos #(44) pmos_AN43(w44,vdd,B1); //  
+ pmos #(44) pmos_AN44(w44,vdd,A1); //  
+ nmos #(44) nmos_AN45(w44,w45,B1); //  
+ nmos #(12) nmos_AN46(w45,vss,A1); //  
+ pmos #(1) pmos_AN47(w48,w46,w47); //  
+ nmos #(1) nmos_AN48(w50,w49,w47); //  
+ nmos #(58) nmos_AN49(w2,vss,w44); //  
+ pmos #(58) pmos_AN50(w2,vdd,w44); //  
+ pmos #(38) pmos_XO1_HA51(w51,vdd,w10); //  
+ nmos #(38) nmos_XO2_HA52(w51,vss,w10); //  
+ pmos #(62) pmos_XO3_HA53(w52,w7,w10); //  
+ nmos #(62) nmos_XO4_HA54(w52,w7,w51); //  
+ pmos #(62) pmos_XO5_HA55(w52,w10,w7); //  
+ nmos #(62) nmos_XO6_HA56(w52,w51,w7); //  
+ pmos #(26) pmos_XO7_HA57(out2,vdd,w53); //  
+ nmos #(26) nmos_XO8_HA58(out2,vss,w53); //  
+ nmos #(38) nmos_XO9_HA59(w53,vss,w52); //  
+ pmos #(38) pmos_XO10_HA60(w53,vdd,w52); //  
+ pmos #(50) pmos_AN11_HA61(w54,vdd,w10); //  
+ pmos #(50) pmos_AN12_HA62(w54,vdd,w7); //  
+ nmos #(50) nmos_AN13_HA63(w54,w55,w10); //  
+ nmos #(13) nmos_AN14_HA64(w55,vss,w7); //  
+ pmos #(1) pmos_AN15_HA65(w58,w56,w57); //  
+ nmos #(1) nmos_AN16_HA66(w60,w59,w57); //  
+ nmos #(61) nmos_AN17_HA67(w1,vss,w54); //  
+ pmos #(61) pmos_AN18_HA68(w1,vdd,w54); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 B0=~B0;
+#2000 B1=~B1;
+#4000 A0=~A0;
+#8000 A1=~A1;
+
+// Simulation parameters
+// B0 CLK 10 10
+// B1 CLK 20 20
+// A0 CLK 40 40
+// A1 CLK 80 80

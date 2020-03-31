@@ -1,0 +1,37 @@
+// DSCH 2.7a
+// 26-Mar-20 5:22:04 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\HALFADDER.sch
+
+module HALFADDER( A,B,S,C);
+ input A,B;
+ output S,C;
+ wire w5,w6,w7,w8,w9,w10,w11,w12;
+ wire w13,w14;
+ pmos #(33) pmos_XO1(w5,vdd,A); //  
+ nmos #(33) nmos_XO2(w5,vss,A); //  
+ pmos #(54) pmos_XO3(w6,B,A); //  
+ nmos #(54) nmos_XO4(w6,B,w5); //  
+ pmos #(54) pmos_XO5(w6,A,B); //  
+ nmos #(54) nmos_XO6(w6,w5,B); //  
+ pmos #(23) pmos_XO7(S,vdd,w7); //  
+ nmos #(23) nmos_XO8(S,vss,w7); //  
+ nmos #(33) nmos_XO9(w7,vss,w6); //  
+ pmos #(33) pmos_XO10(w7,vdd,w6); //  
+ pmos #(44) pmos_AN11(w8,vdd,A); //  
+ pmos #(44) pmos_AN12(w8,vdd,B); //  
+ nmos #(44) nmos_AN13(w8,w9,A); //  
+ nmos #(12) nmos_AN14(w9,vss,B); //  
+ pmos #(1) pmos_AN15(w12,w10,w11); //  
+ nmos #(1) nmos_AN16(w14,w13,w11); //  
+ nmos #(23) nmos_AN17(C,vss,w8); //  
+ pmos #(23) pmos_AN18(C,vdd,w8); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 A=~A;
+#2000 B=~B;
+
+// Simulation parameters
+// A CLK 10.000 10.000
+// B CLK 20.000 20.000

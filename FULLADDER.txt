@@ -1,0 +1,64 @@
+// DSCH 2.7a
+// 29-Mar-20 5:50:41 PM
+// C:\Users\user\Downloads\Export dsch2\Export dsch2\Export dsch2\Jubaer_Project\FULLADDER.sch
+
+module FULLADDER( Y,Cin,X,Cout,Sum);
+ input Y,Cin,X;
+ output Cout,Sum;
+ wire w9,w10,w11,w12,w13,w14,w15,w16;
+ wire w17,w18,w19,w20,w21,w22,w23,w24;
+ wire w25,w26,w27,w28,w29,w30;
+ pmos #(33) pmos_XO1(w9,vdd,w2); //  
+ nmos #(33) nmos_XO2(w9,vss,w2); //  
+ pmos #(54) pmos_XO3(w10,Cin,w2); //  
+ nmos #(54) nmos_XO4(w10,Cin,w9); //  
+ pmos #(54) pmos_XO5(w10,w2,Cin); //  
+ nmos #(54) nmos_XO6(w10,w9,Cin); //  
+ pmos #(23) pmos_XO7(Sum,vdd,w11); //  
+ nmos #(23) nmos_XO8(Sum,vss,w11); //  
+ nmos #(33) nmos_XO9(w11,vss,w10); //  
+ pmos #(33) pmos_XO10(w11,vdd,w10); //  
+ pmos #(33) pmos_XO11(w12,vdd,X); //  
+ nmos #(33) nmos_XO12(w12,vss,X); //  
+ pmos #(54) pmos_XO13(w13,Y,X); //  
+ nmos #(54) nmos_XO14(w13,Y,w12); //  
+ pmos #(54) pmos_XO15(w13,X,Y); //  
+ nmos #(54) nmos_XO16(w13,w12,Y); //  
+ pmos #(58) pmos_XO17(w2,vdd,w14); //  
+ nmos #(58) nmos_XO18(w2,vss,w14); //  
+ nmos #(33) nmos_XO19(w14,vss,w13); //  
+ pmos #(33) pmos_XO20(w14,vdd,w13); //  
+ pmos #(44) pmos_OR21(w16,w15,w6); //  
+ pmos #(12) pmos_OR22(w15,vdd,w7); //  
+ nmos #(44) nmos_OR23(w16,vss,w7); //  
+ nmos #(44) nmos_OR24(w16,vss,w6); //  
+ nmos #(23) nmos_OR25(Cout,vss,w16); //  
+ pmos #(23) pmos_OR26(Cout,vdd,w16); //  
+ pmos #(44) pmos_AN27(w17,vdd,X); //  
+ pmos #(44) pmos_AN28(w17,vdd,Y); //  
+ nmos #(44) nmos_AN29(w17,w18,X); //  
+ nmos #(12) nmos_AN30(w18,vss,Y); //  
+ pmos #(1) pmos_AN31(w21,w19,w20); //  
+ nmos #(1) nmos_AN32(w23,w22,w20); //  
+ nmos #(30) nmos_AN33(w6,vss,w17); //  
+ pmos #(30) pmos_AN34(w6,vdd,w17); //  
+ pmos #(44) pmos_AN35(w24,vdd,Cin); //  
+ pmos #(44) pmos_AN36(w24,vdd,w2); //  
+ nmos #(44) nmos_AN37(w24,w25,Cin); //  
+ nmos #(12) nmos_AN38(w25,vss,w2); //  
+ pmos #(1) pmos_AN39(w28,w26,w27); //  
+ nmos #(1) nmos_AN40(w30,w29,w27); //  
+ nmos #(30) nmos_AN41(w7,vss,w24); //  
+ pmos #(30) pmos_AN42(w7,vdd,w24); //  
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 Y=~Y;
+#2000 Cin=~Cin;
+#4000 X=~X;
+
+// Simulation parameters
+// Y CLK 10 10
+// Cin CLK 20 20
+// X CLK 40 40
